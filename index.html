@@ -1,0 +1,134 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Hasin Rehana | Researcher Profile</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .tab-content { display: none; }
+    .tab-content.active { display: block; }
+  </style>
+</head>
+<body class="bg-gray-100 text-gray-900 font-sans">
+
+  <header class="bg-blue-900 text-white text-center p-6">
+    <img src="profile.jpg" class="rounded-full mx-auto w-32 h-32 border-4 border-white mb-4" alt="Profile">
+    <h1 class="text-3xl font-bold">Hasin Rehana</h1>
+    <p class="text-lg">PhD Researcher | Biomedical NLP | AI in Biomedicine</p>
+    <div class="mt-2">
+      <a href="mailto:hasin.rehana@und.edu" class="underline">hasin.rehana@und.edu</a> |
+      <a href="https://scholar.google.com/citations?user=q6tQJu0AAAAJ" target="_blank" class="underline">Google Scholar</a> |
+      <a href="https://www.linkedin.com/in/hasin-rehana-580184140" target="_blank" class="underline">LinkedIn</a> |
+      <a href="https://www.researchgate.net/profile/Hasin_Rehana" target="_blank" class="underline">ResearchGate</a>
+    </div>
+  </header>
+
+  <nav class="bg-blue-700 text-white flex flex-wrap justify-center gap-4 p-4 sticky top-0 z-10">
+    <button onclick="showTab('overview')">Overview</button>
+    <button onclick="showTab('research')">Research</button>
+    <button onclick="showTab('education')">Education</button>
+    <button onclick="showTab('publications')">Publications</button>
+    <button onclick="showTab('projects')">Projects</button>
+    <button onclick="showTab('talks')">Talks/Posters</button>
+    <button onclick="showTab('experience')">Experience</button>
+    <button onclick="showTab('skills')">Skills</button>
+    <button onclick="showTab('awards')">Awards</button>
+    <button onclick="showTab('contact')">Contact</button>
+  </nav>
+
+  <main class="max-w-5xl mx-auto p-6">
+    <section id="overview" class="tab-content active">
+      <h2 class="text-2xl font-bold mb-4">Profile Overview</h2>
+      <p>Welcome to my research portfolio. I specialize in Artificial Intelligence in Biomedicine with a focus on Biomedical NLP, LLMs, and Bioinformatics. This site highlights my education, publications, research projects, and academic contributions.</p>
+    </section>
+
+    <section id="research" class="tab-content">
+      <h2 class="text-2xl font-bold mb-4">Research Interests</h2>
+      <p>BioNLP, Relation Extraction, Biomedical Corpus Construction, LLMs like BERT, GPT, Llama, Gemini, and multimodal deep learning for clinical applications.</p>
+    </section>
+
+    <section id="education" class="tab-content">
+      <h2 class="text-2xl font-bold mb-4">Education</h2>
+      <ul class="list-disc pl-5">
+        <li>Ph.D. in Computer Science – University of North Dakota (GPA: 4.00, Expected 2026)</li>
+        <li>M.Sc. in CSE – University of Dhaka, 2022 (CGPA: 3.73)</li>
+        <li>B.Sc. in CSE – RUET, 2018 (CGPA: 3.63)</li>
+      </ul>
+    </section>
+
+    <section id="publications" class="tab-content">
+      <h2 class="text-2xl font-bold mb-4">Publications</h2>
+      <ul class="list-disc pl-5 space-y-2 text-sm">
+        <li>Rehana et al., Bioinformatics Advances, 2024. <a href="https://doi.org/10.1093/bioadv/vbae133" class="text-blue-600 underline">Link</a></li>
+        <li>Rehana et al., CLEF 2024. <a href="https://ceur-ws.org/Vol-3740/paper-18.pdf" class="text-blue-600 underline">Link</a></li>
+        <li>Cancer Vaccine Adjuvant Mining, arXiv, 2024. <a href="https://doi.org/10.48550/arXiv.2502.09659" class="text-blue-600 underline">Link</a></li>
+      </ul>
+    </section>
+
+    <section id="projects" class="tab-content">
+      <h2 class="text-2xl font-bold mb-4">Projects</h2>
+      <ul class="list-disc pl-5">
+        <li>Web Crawler for Biomedical NLP (UND Internal Tool)</li>
+        <li>Plant Leaf Disease Detection using RCNN</li>
+        <li>Bangla Handwritten Digit Recognition with SVM + HOG</li>
+      </ul>
+    </section>
+
+    <section id="talks" class="tab-content">
+      <h2 class="text-2xl font-bold mb-4">Posters & Talks</h2>
+      <ul class="list-disc pl-5">
+        <li>GLBIO 2025 – Talk on vaccine adjuvant mining</li>
+        <li>UND GRAD 2025 – Poster on nested NER</li>
+        <li>ISV Congress 2024 – Poster on clinical trials</li>
+      </ul>
+    </section>
+
+    <section id="experience" class="tab-content">
+      <h2 class="text-2xl font-bold mb-4">Experience</h2>
+      <ul class="list-disc pl-5">
+        <li>Graduate Research Assistant – UND (2023–Present)</li>
+        <li>Lecturer (on leave) – DIU Bangladesh (2019–Present)</li>
+      </ul>
+    </section>
+
+    <section id="skills" class="tab-content">
+      <h2 class="text-2xl font-bold mb-4">Technical Skills</h2>
+      <ul class="list-disc pl-5">
+        <li>Languages: Python, Java, C++</li>
+        <li>ML/DL: PyTorch, TensorFlow, Keras</li>
+        <li>NLP: HuggingFace Transformers, GPT, BERT</li>
+        <li>Tools: Git, Firebase, Cytoscape, BioPython</li>
+      </ul>
+    </section>
+
+    <section id="awards" class="tab-content">
+      <h2 class="text-2xl font-bold mb-4">Awards</h2>
+      <ul class="list-disc pl-5">
+        <li>Best Poster Award – UND CARS 2023</li>
+        <li>Travel Award – SDSU 2024</li>
+        <li>ICT Fellowship – Govt. of Bangladesh</li>
+      </ul>
+    </section>
+
+    <section id="contact" class="tab-content">
+      <h2 class="text-2xl font-bold mb-4">Contact & CV</h2>
+      <p>Email: <a href="mailto:hasin.rehana@und.edu" class="text-blue-600 underline">hasin.rehana@und.edu</a></p>
+      <p>Download Full CV: <a href="HasinRehana_CV.pdf" class="text-blue-600 underline" download>Click here</a></p>
+    </section>
+  </main>
+
+  <footer class="text-center bg-blue-900 text-white py-4">
+    &copy; 2025 Hasin Rehana. Built with 💙 using GitHub Pages.
+  </footer>
+
+<script>
+  function showTab(tabId) {
+    document.querySelectorAll('.tab-content').forEach(tab => {
+      tab.classList.remove('active');
+    });
+    document.getElementById(tabId).classList.add('active');
+  }
+</script>
+</body>
+</html>
