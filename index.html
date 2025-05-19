@@ -1,0 +1,170 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Hasin Rehana | Full Academic Profile</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+    .sidebar-link { @apply py-2 px-4 hover:bg-blue-200 cursor-pointer; }
+    .tab-content { display: none; }
+    .tab-content.active { display: block; }
+  </style>
+</head>
+<body class="h-screen flex bg-gray-100">
+
+  <aside class="w-64 bg-blue-800 text-white flex flex-col items-center py-6 space-y-4">
+    <img src="profile.jpg" alt="Profile" class="rounded-full w-28 h-28 border-4 border-white">
+    <h1 class="text-xl font-bold text-center">Hasin Rehana</h1>
+    <p class="text-sm text-center px-2">PhD Researcher<br>Biomedical NLP & AI in Biomedicine</p>
+    <nav class="w-full mt-4 space-y-2 text-sm">
+      <div class="sidebar-link bg-blue-700" onclick="showTab('overview')">Overview</div>
+      <div class="sidebar-link" onclick="showTab('research')">Research</div>
+      <div class="sidebar-link" onclick="showTab('education')">Education</div>
+      <div class="sidebar-link" onclick="showTab('publications')">Publications</div>
+      <div class="sidebar-link" onclick="showTab('projects')">Projects</div>
+      <div class="sidebar-link" onclick="showTab('talks')">Talks & Posters</div>
+      <div class="sidebar-link" onclick="showTab('experience')">Experience</div>
+      <div class="sidebar-link" onclick="showTab('skills')">Skills</div>
+      <div class="sidebar-link" onclick="showTab('awards')">Awards</div>
+      
+<div class="sidebar-link" onclick="showTab('repos')">LLM Repos</div>
+<div class="sidebar-link" onclick="showTab('allpublications')">All Publications</div>
+<div class="sidebar-link" onclick="showTab('presentations')">Talks & Posters</div>
+<div class="sidebar-link" onclick="showTab('contact')">Contact</div>
+    </nav>
+  </aside>
+
+  <main class="flex-1 overflow-y-auto p-10 space-y-10 bg-white shadow-inner">
+    <section id="overview" class="tab-content active">
+      <h2 class="text-2xl font-bold mb-4">Profile Overview</h2>
+      <p>Welcome! I’m Hasin Rehana, a PhD researcher in AI and Biomedical NLP. This dashboard highlights my education, research, publications, projects, and technical journey.</p>
+    </section>
+
+    <section id="research" class="tab-content">
+      <h2 class="text-2xl font-bold mb-4">Research Interests</h2>
+      <p>BioNLP, biomedical relation extraction, multimodal learning, GPT-based extraction pipelines, and LLMs in cancer vaccine discovery. I focus on applying transformers and generative models in medical text mining tasks.</p>
+    </section>
+
+    <section id="education" class="tab-content">
+      <h2 class="text-2xl font-bold mb-4">Education</h2>
+      <ul class="list-disc pl-5 space-y-2">
+        <li><strong>PhD in Computer Science (UND, USA)</strong><br>
+          GPA: 4.00 | Research: BioNLP, LLMs, Multimodal AI<br>
+          Advisor: Dr. Junguk Hur
+        </li>
+        <li><strong>M.Sc. in CSE (University of Dhaka)</strong><br>
+          CGPA: 3.73 | Thesis: Plant Leaf Disease Detection using RCNN
+        </li>
+        <li><strong>B.Sc. in CSE (RUET, Bangladesh)</strong><br>
+          CGPA: 3.63 | Thesis: Spatial-spectral CNN for Hyperspectral Image Classification
+        </li>
+      </ul>
+    </section>
+
+    <section id="publications" class="tab-content">
+      <h2 class="text-2xl font-bold mb-4">Publications</h2>
+      <p>8 peer-reviewed articles + 3 preprints + 1 under review. Topics include protein interaction extraction, cancer vaccine mining, and biomedical NER. Full list available in downloadable CV.</p>
+      <ul class="list-disc pl-5 text-sm space-y-2">
+        <li><strong>PPI with BERT and GPT</strong> — Bioinformatics Advances, 2024 <a href="https://doi.org/10.1093/bioadv/vbae133" class="text-blue-700 underline">DOI</a></li>
+        <li><strong>Nested NER using Multilayer BERT</strong> — CLEF, 2024 <a href="https://ceur-ws.org/Vol-3740/paper-18.pdf" class="text-blue-700 underline">PDF</a></li>
+        <li><strong>Cancer Vaccine Adjuvant Recognition</strong> — arXiv, 2024 <a href="https://doi.org/10.48550/arXiv.2502.09659" class="text-blue-700 underline">arXiv</a></li>
+      </ul>
+    </section>
+
+    <section id="projects" class="tab-content">
+      <h2 class="text-2xl font-bold mb-4">Major Projects</h2>
+      <ul class="list-disc pl-5 space-y-2">
+        <li>Web Crawler for biomedical literature (LLM fine-tuning, GPT use)</li>
+        <li>Smartphone price prediction model (Regression app, ML)</li>
+        <li>Plant leaf disease classification (Deep CNN using RCNN)</li>
+        <li>Handwritten digit recognition using HOG + SVM</li>
+      </ul>
+    </section>
+
+    <section id="talks" class="tab-content">
+      <h2 class="text-2xl font-bold mb-4">Talks & Posters</h2>
+      <ul class="list-disc pl-5 text-sm space-y-2">
+        <li>GLBIO 2025 – Talk on LLMs for vaccine discovery</li>
+        <li>ISV 2024, Korea – Poster on adjuvant NER (LLM)</li>
+        <li>UND GRAD 2025 – Poster on nested biomedical NER</li>
+        <li>ND EPSCoR, ICBO, SDSU Symposium – Posters on GPT for PPI</li>
+      </ul>
+    </section>
+
+    <section id="experience" class="tab-content">
+      <h2 class="text-2xl font-bold mb-4">Experience</h2>
+      <ul class="list-disc pl-5">
+        <li>Graduate Research Assistant – UND (2023–Present)</li>
+        <li>Lecturer – Daffodil International University (on leave)</li>
+        <li>Convener – Girls' Computer Programming Club</li>
+      </ul>
+    </section>
+
+    <section id="skills" class="tab-content">
+      <h2 class="text-2xl font-bold mb-4">Technical Skills</h2>
+      <ul class="list-disc pl-5 grid grid-cols-2 gap-x-8">
+        <li>Python, Java, C++</li>
+        <li>PyTorch, TensorFlow, Scikit-learn</li>
+        <li>Transformers, BERT, GPT, Llama</li>
+        <li>Git, GitHub, Firebase</li>
+        <li>BioPython, Cytoscape</li>
+        <li>OpenCV, MATLAB</li>
+      </ul>
+    </section>
+
+    <section id="awards" class="tab-content">
+      <h2 class="text-2xl font-bold mb-4">Awards & Fellowships</h2>
+      <ul class="list-disc pl-5 space-y-2">
+        <li>Travel Award – SDSU 2024</li>
+        <li>Best Poster – UND CARS 2023</li>
+        <li>ICT Fellowship – Bangladesh Govt.</li>
+        <li>Google Study Jam, Hackathons, Android Study Jam</li>
+      </ul>
+    </section>
+
+    <section id="contact" class="tab-content">
+      <h2 class="text-2xl font-bold mb-4">Contact & CV</h2>
+      <p>Email: <a href="mailto:hasin.rehana@und.edu" class="text-blue-700 underline">hasin.rehana@und.edu</a></p>
+      <p><a href="HasinRehana_CV.pdf" class="text-blue-700 underline" download>Download Full CV (PDF)</a></p>
+    </section>
+  
+<section id="repos" class="tab-content">
+  <h2 class="text-2xl font-bold mb-4">LLM Research Repositories</h2>
+  <ul class="space-y-4">
+    <li class="bg-gray-100 p-4 rounded-xl shadow hover:shadow-lg transition">
+      <h3 class="font-semibold text-lg">PPI-GPT-BERT</h3>
+      <p class="text-sm">Transformer-based protein–protein interaction extraction pipeline (Bioinformatics Advances 2024).</p>
+      <a href="https://github.com/hurlab/PPI-GPT-BERT" class="text-blue-700 underline">View Repository</a>
+    </li>
+    <li class="bg-gray-100 p-4 rounded-xl shadow hover:shadow-lg transition">
+      <h3 class="font-semibold text-lg">Nested-NER-BERT</h3>
+      <p class="text-sm">Nested biomedical named entity recognition using multilayer BERT (CLEF 2024).</p>
+      <a href="https://github.com/hurlab/Nested-NER-BERT" class="text-blue-700 underline">View Repository</a>
+    </li>
+    <li class="bg-gray-100 p-4 rounded-xl shadow hover:shadow-lg transition">
+      <h3 class="font-semibold text-lg">Vaccine-Adjuvant-LLM</h3>
+      <p class="text-sm">Cancer vaccine adjuvant name recognition from biomedical literature using LLMs (arXiv 2024).</p>
+      <a href="https://github.com/hurlab/Vaccine-Adjuvant-LLM" class="text-blue-700 underline">View Repository</a>
+    </li>
+    <li class="bg-gray-100 p-4 rounded-xl shadow hover:shadow-lg transition">
+      <h3 class="font-semibold text-lg">ArchEHR-QA</h3>
+      <p class="text-sm">LLM-based question answering framework for EHR data. Focus on architecture-informed retrieval.</p>
+      <a href="https://github.com/hurlab/ArchEHR-QA" class="text-blue-700 underline">View Repository</a>
+    </li>
+  </ul>
+</section>
+
+</main>
+
+<script>
+  function showTab(tabId) {
+    document.querySelectorAll('.tab-content').forEach(tab => tab.classList.remove('active'));
+    document.getElementById(tabId).classList.add('active');
+    document.querySelectorAll('.sidebar-link').forEach(link => link.classList.remove('bg-blue-700'));
+    event.target.classList.add('bg-blue-700');
+  }
+</script>
+</body>
+</html>
