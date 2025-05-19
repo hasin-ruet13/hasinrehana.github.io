@@ -6,7 +6,6 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
     body { font-family: 'Inter', sans-serif; }
-    .sidebar-link { @apply py-2 px-4 hover:bg-blue-200 cursor-pointer; }
     .tab-content { display: none; }
     .tab-content.active { display: block; }
   </style>
@@ -19,27 +18,26 @@
       <p class="text-sm text-center px-2">PhD Researcher<br/>Biomedical NLP & AI in Biomedicine</p>
 
       <nav class="w-full mt-4 space-y-2 text-sm">
-        <div class="sidebar-link bg-blue-700" onclick="showTab(event, 'overview')">Overview</div>
-        <div class="sidebar-link" onclick="showTab(event, 'research')">Research</div>
-        <div class="sidebar-link" onclick="showTab(event, 'education')">Education</div>
-        <div class="sidebar-link" onclick="showTab(event, 'publications')">Publications</div>
-        <div class="sidebar-link" onclick="showTab(event, 'projects')">Projects</div>
-        <div class="sidebar-link" onclick="showTab(event, 'talks')">Talks & Posters</div>
-        <div class="sidebar-link" onclick="showTab(event, 'experience')">Experience</div>
-        <div class="sidebar-link" onclick="showTab(event, 'skills')">Skills</div>
-        <div class="sidebar-link" onclick="showTab(event, 'awards')">Awards</div>
-        <div class="sidebar-link" onclick="showTab(event, 'contact')">Contact</div>
+        <div class="pl-4 py-2 hover:bg-blue-200 cursor-pointer sidebar-link bg-blue-700" onclick="showTab(event, 'overview')">Overview</div>
+        <div class="pl-4 py-2 hover:bg-blue-200 cursor-pointer sidebar-link" onclick="showTab(event, 'research')">Research</div>
+        <div class="pl-4 py-2 hover:bg-blue-200 cursor-pointer sidebar-link" onclick="showTab(event, 'education')">Education</div>
+        <div class="pl-4 py-2 hover:bg-blue-200 cursor-pointer sidebar-link" onclick="showTab(event, 'publications')">Publications</div>
+        <div class="pl-4 py-2 hover:bg-blue-200 cursor-pointer sidebar-link" onclick="showTab(event, 'projects')">Projects</div>
+        <div class="pl-4 py-2 hover:bg-blue-200 cursor-pointer sidebar-link" onclick="showTab(event, 'talks')">Talks & Posters</div>
+        <div class="pl-4 py-2 hover:bg-blue-200 cursor-pointer sidebar-link" onclick="showTab(event, 'experience')">Experience</div>
+        <div class="pl-4 py-2 hover:bg-blue-200 cursor-pointer sidebar-link" onclick="showTab(event, 'skills')">Skills</div>
+        <div class="pl-4 py-2 hover:bg-blue-200 cursor-pointer sidebar-link" onclick="showTab(event, 'awards')">Awards</div>
+        <div class="pl-4 py-2 hover:bg-blue-200 cursor-pointer sidebar-link" onclick="showTab(event, 'contact')">Contact</div>
       </nav>
-
-      <div class="flex flex-col items-center text-blue-200 text-sm mt-4 space-y-1">
-        <div class="flex space-x-4">
-          <a class="hover:underline" href="https://scholar.google.com/citations?user=q6tQJu0AAAAJ&amp;hl=en&amp;authuser=4" target="_blank">Scholar</a>
-          <a class="hover:underline" href="https://github.com/hurlab" target="_blank">GitHub</a>
-        </div>
-        <div class="flex space-x-4">
-          <a class="hover:underline" href="https://www.linkedin.com/in/hasin-rehana-580184140" target="_blank">LinkedIn</a>
-          <a class="hover:underline" href="https://www.researchgate.net/profile/Hasin_Rehana" target="_blank">ResearchGate</a>
-        </div>
+    </div>
+    <div class="flex flex-col items-center text-blue-200 text-sm space-y-1 px-4">
+      <div class="flex space-x-4">
+        <a class="hover:underline" href="https://scholar.google.com/citations?user=q6tQJu0AAAAJ&amp;hl=en&amp;authuser=4" target="_blank">Scholar</a>
+        <a class="hover:underline" href="https://github.com/hurlab" target="_blank">GitHub</a>
+      </div>
+      <div class="flex space-x-4">
+        <a class="hover:underline" href="https://www.linkedin.com/in/hasin-rehana-580184140" target="_blank">LinkedIn</a>
+        <a class="hover:underline" href="https://www.researchgate.net/profile/Hasin_Rehana" target="_blank">ResearchGate</a>
       </div>
     </div>
   </aside>
@@ -165,7 +163,7 @@
 </main>
 
     
- <script>
+   <script>
     function showTab(event, tabId) {
       document.querySelectorAll('.tab-content').forEach(tab => tab.classList.remove('active'));
       document.getElementById(tabId).classList.add('active');
@@ -175,3 +173,4 @@
   </script>
 </body>
 </html>
+
