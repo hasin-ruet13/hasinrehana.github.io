@@ -1,29 +1,55 @@
-
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
-<meta charset="utf-8"/>
-<title>Hasin Rehana | Full Academic Profile</title>
-<script src="https://cdn.tailwindcss.com"></script>
-<style>
+  <meta charset="utf-8" />
+  <title>Hasin Rehana | Full Academic Profile</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
     body { font-family: 'Inter', sans-serif; }
     .sidebar-link { @apply py-2 px-4 hover:bg-blue-200 cursor-pointer; }
     .tab-content { display: none; }
     .tab-content.active { display: block; }
-  
-.sidebar-link { padding-left: 1rem; }
-</style>
+    .sidebar-link { padding-left: 1rem; }
+  </style>
 </head>
 <body class="h-screen flex bg-gray-100">
 <aside class="w-64 bg-blue-800 text-white flex flex-col items-center py-6 space-y-4">
-<img alt="Profile" class="rounded-full w-28 h-28 border-4 border-white" src="profile.jpg"/>
-<h1 class="text-xl font-bold text-center">Hasin Rehana</h1>
+  <img alt="Profile" class="rounded-full w-28 h-28 border-4 border-white" src="profile.jpg" />
+  <h1 class="text-xl font-bold text-center leading-tight">Hasin Rehana</h1>
+  <p class="text-sm text-center px-2 -mt-1">PhD Researcher<br/>Biomedical NLP &amp; AI in Biomedicine</p>
 
+  <nav class="w-full mt-4 space-y-2 text-sm">
+    <div class="sidebar-link bg-blue-700" onclick="showTab('overview')">Overview</div>
+    <div class="sidebar-link" onclick="showTab('research')">Research</div>
+    <div class="sidebar-link" onclick="showTab('education')">Education</div>
+    <div class="sidebar-link" onclick="showTab('publications')">Publications</div>
+    <div class="sidebar-link" onclick="showTab('projects')">Projects</div>
+    <div class="sidebar-link" onclick="showTab('talks')">Talks &amp; Posters</div>
+    <div class="sidebar-link" onclick="showTab('experience')">Experience</div>
+    <div class="sidebar-link" onclick="showTab('skills')">Skills</div>
+    <div class="sidebar-link" onclick="showTab('awards')">Awards</div>
+    <div class="sidebar-link" onclick="showTab('contact')">Contact</div>
+    <div class="sidebar-link" onclick="showTab('hobbies')">Hobbies</div>
+  </nav>
 
-<p class="text-sm text-center px-2">PhD Researcher<br/>Biomedical NLP &amp; AI in Biomedicine</p>
+  <div class="mt-auto text-sm text-blue-200 space-y-1 text-center pb-4">
+    <div class="flex justify-center space-x-4">
+      <a class="hover:underline" href="https://scholar.google.com/citations?user=q6tQJu0AAAAJ&amp;hl=en&amp;authuser=4" target="_blank">Scholar</a>
+      <a class="hover:underline" href="https://github.com/hurlab" target="_blank">GitHub</a>
+    </div>
+    <div class="flex justify-center space-x-4">
+      <a class="hover:underline" href="https://www.linkedin.com/in/hasin-rehana-580184140" target="_blank">LinkedIn</a>
+      <a class="hover:underline" href="https://www.researchgate.net/profile/Hasin_Rehana" target="_blank">ResearchGate</a>
+    </div>
+  </div>
+</aside>
 
-    
+<main class="flex-1 overflow-y-auto p-10 space-y-10 bg-white shadow-inner">
+  <section class="tab-content active" id="overview">
+    <h2 class="text-2xl font-bold mb-4">Profile Overview</h2>
+    <p class="mb-4">I’m <strong>Hasin Rehana</strong>, a PhD researcher in AI and Biomedical NLP at the University of North Dakota. My work lies at the intersection of deep learning, large language models (LLMs), and biomedical informatics — focusing on cancer vaccine discovery, protein-protein interaction mining, and biomedical entity recognition. With hands-on experience in BERT, GPT, and LLaMA models, I build innovative NLP pipelines for real-world medical text mining problems. I contribute to open-source projects, present research at international conferences, and publish in peer-reviewed journals.</p>
+  </section>
+
 
 
 
@@ -179,8 +205,16 @@
 <h2 class="text-2xl font-bold mb-4">Contact &amp; CV</h2>
 <p>Email: <a class="text-blue-700 underline" href="mailto:hasin.rehana@und.edu">hasin.rehana@und.edu</a></p>
 <p><a class="text-blue-700 underline" download="" href="HasinRehana_CV.pdf">Download Full CV (PDF)</a></p>
-</section>
+<section class="tab-content" id="hobbies">
+    <h2 class="text-2xl font-bold mb-4">Hobbies</h2>
+    <ul class="list-disc pl-5 text-sm space-y-1">
+      <li>Painting</li>
+      <li>Reading and writing fiction</li>
+      <li>Travelling</li>
+    </ul>
+  </section>
 </main>
+
 <script>
   function showTab(tabId) {
     document.querySelectorAll('.tab-content').forEach(tab => tab.classList.remove('active'));
@@ -189,7 +223,6 @@
     event.target.classList.add('bg-blue-700');
   }
 </script>
-
 
 
 
