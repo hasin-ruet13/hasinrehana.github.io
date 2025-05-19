@@ -22,7 +22,7 @@
         <div class="pl-4 py-1.5 hover:bg-blue-200 cursor-pointer sidebar-link" onclick="showTab(event, 'research')">Research</div>
         <div class="pl-4 py-1.5 hover:bg-blue-200 cursor-pointer sidebar-link" onclick="showTab(event, 'education')">Education</div>
         <div class="pl-4 py-1.5 hover:bg-blue-200 cursor-pointer sidebar-link" onclick="showTab(event, 'publications')">Publications</div>
-        <div class="pl-4 py-1.5 hover:bg-blue-200 cursor-pointer sidebar-link" onclick="showTab(event, 'projects')">Projects</div>
+        <div class="pl-4 py-1.5 hover:bg-blue-200 cursor-pointer sidebar-link" onclick="showTab(event, 'repos')">LLM Repositiories</div>
         <div class="pl-4 py-1.5 hover:bg-blue-200 cursor-pointer sidebar-link" onclick="showTab(event, 'talks')">Talks & Posters</div>
         <div class="pl-4 py-1.5 hover:bg-blue-200 cursor-pointer sidebar-link" onclick="showTab(event, 'experience')">Experience</div>
         <div class="pl-4 py-1.5 hover:bg-blue-200 cursor-pointer sidebar-link" onclick="showTab(event, 'skills')">Skills</div>
@@ -95,39 +95,31 @@
   </ul>
 </section>
 
-<section class="tab-content" id="projects">
-      <h2 class="text-3xl font-extrabold text-gray-800 mb-6">🚀 Projects & Repositories</h2>
-      <div class="grid gap-4">
-        <div class="p-4 border border-gray-200 rounded-xl shadow hover:shadow-lg transition">
-          <h3 class="font-semibold text-lg">Web Crawler for biomedical literature</h3>
-          <p class="text-sm text-gray-600">LLM fine-tuning, GPT use — <a class="text-blue-600 underline" href="https://github.com/hurlab/PPI-GPT-BERT">GitHub</a></p>
-        </div>
-        <div class="p-4 border border-gray-200 rounded-xl shadow hover:shadow-lg transition">
-          <h3 class="font-semibold text-lg">Cancer Vaccine Adjuvant Extraction</h3>
-          <p class="text-sm text-gray-600">— <a class="text-blue-600 underline" href="https://github.com/hurlab/Vaccine-Adjuvant-LLM">GitHub</a></p>
-        </div>
-        <div class="p-4 border border-gray-200 rounded-xl shadow hover:shadow-lg transition">
-          <h3 class="font-semibold text-lg">Nested Biomedical NER using BERT</h3>
-          <p class="text-sm text-gray-600">— <a class="text-blue-600 underline" href="https://github.com/hurlab/Nested-NER-BERT">GitHub</a></p>
-        </div>
-        <div class="p-4 border border-gray-200 rounded-xl shadow hover:shadow-lg transition">
-          <h3 class="font-semibold text-lg">LLM QA for EHR</h3>
-          <p class="text-sm text-gray-600">— <a class="text-blue-600 underline" href="https://github.com/hurlab/ArchEHR-QA">GitHub</a></p>
-        </div>
-        <div class="p-4 border border-gray-200 rounded-xl shadow hover:shadow-lg transition">
-          <h3 class="font-semibold text-lg">Smartphone Price Prediction Model</h3>
-          <p class="text-sm text-gray-600">Regression app using ML</p>
-        </div>
-        <div class="p-4 border border-gray-200 rounded-xl shadow hover:shadow-lg transition">
-          <h3 class="font-semibold text-lg">Plant Leaf Disease Classification</h3>
-          <p class="text-sm text-gray-600">Deep CNN using RCNN</p>
-        </div>
-        <div class="p-4 border border-gray-200 rounded-xl shadow hover:shadow-lg transition">
-          <h3 class="font-semibold text-lg">Handwritten Digit Recognition</h3>
-          <p class="text-sm text-gray-600">Using HOG + SVM</p>
-        </div>
-      </div>
-    </section>
+<section id="repos" class="tab-content">
+  <h2 class="text-2xl font-bold mb-4">LLM Research Repositories</h2>
+  <ul class="space-y-4">
+    <li class="bg-gray-100 p-4 rounded-xl shadow hover:shadow-lg transition">
+      <h3 class="font-semibold text-lg">PPI-GPT-BERT</h3>
+      <p class="text-sm">Transformer-based protein–protein interaction extraction pipeline (Bioinformatics Advances 2024).</p>
+      <a href="https://github.com/hurlab/PPI-GPT-BERT" class="text-blue-700 underline">View Repository</a>
+    </li>
+    <li class="bg-gray-100 p-4 rounded-xl shadow hover:shadow-lg transition">
+      <h3 class="font-semibold text-lg">Nested-NER-BERT</h3>
+      <p class="text-sm">Nested biomedical named entity recognition using multilayer BERT (CLEF 2024).</p>
+      <a href="https://github.com/hurlab/Nested-NER-BERT" class="text-blue-700 underline">View Repository</a>
+    </li>
+    <li class="bg-gray-100 p-4 rounded-xl shadow hover:shadow-lg transition">
+      <h3 class="font-semibold text-lg">Vaccine-Adjuvant-LLM</h3>
+      <p class="text-sm">Cancer vaccine adjuvant name recognition from biomedical literature using LLMs (arXiv 2024).</p>
+      <a href="https://github.com/hurlab/Vaccine-Adjuvant-LLM" class="text-blue-700 underline">View Repository</a>
+    </li>
+    <li class="bg-gray-100 p-4 rounded-xl shadow hover:shadow-lg transition">
+      <h3 class="font-semibold text-lg">ArchEHR-QA</h3>
+      <p class="text-sm">LLM-based question answering framework for EHR data. Focus on architecture-informed retrieval.</p>
+      <a href="https://github.com/hurlab/ArchEHR-QA" class="text-blue-700 underline">View Repository</a>
+    </li>
+  </ul>
+</section>
 
 <section class="tab-content" id="talks">
   <h2 class="text-2xl font-bold mb-4">Talks &amp; Posters</h2>
