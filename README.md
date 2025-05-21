@@ -1,15 +1,11 @@
-<table>
-  <tr>
-    <td width="150" valign="top">
-      <img src="profile.jpg" width="140" style="border-radius: 50%;" alt="Hasin Rehana">
-    </td>
-    <td valign="top">
-      <h1>Hasin Rehana</h1>
-      <strong>PhD Candidate | Biomedical NLP | Multimodal Deep Learning</strong><br>
-      <em>University of North Dakota</em>
-    </td>
-  </tr>
-</table>
+<div align="left">
+  <img src="profile.jpg" width="140" style="border-radius: 50%; float: left; margin-right: 20px;" alt="Hasin Rehana">
+</div>
+
+# Hasin Rehana
+**PhD Candidate | Biomedical NLP | Multimodal Deep Learning**  
+_University of North Dakota_
+
 
 ---
 
