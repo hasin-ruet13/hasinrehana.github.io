@@ -9,6 +9,8 @@
     .tab-content { display: none; }
     .tab-content.active { display: block; }
   </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 </head>
 <body class="flex min-h-screen">
   <aside class="w-64 bg-blue-800 text-white flex flex-col justify-between py-6">
@@ -28,6 +30,9 @@
         <div class="pl-4 py-1.5 hover:bg-blue-200 cursor-pointer sidebar-link" onclick="showTab(event, 'experience')">Experience</div>
         <div class="pl-4 py-1.5 hover:bg-blue-200 cursor-pointer sidebar-link" onclick="showTab(event, 'skills')">Skills</div>
         <div class="pl-4 py-1.5 hover:bg-blue-200 cursor-pointer sidebar-link" onclick="showTab(event, 'awards')">Awards</div>
+        
+        <div class="pl-4 py-1.5 hover:bg-blue-200 cursor-pointer sidebar-link" onclick="showTab(event, 'news')">News</div>
+
         <div class="pl-4 py-1.5 hover:bg-blue-200 cursor-pointer sidebar-link" onclick="showTab(event, 'contact')">Contact</div>
       </nav>
     </div>
@@ -52,7 +57,16 @@
 
 <main class="flex-1 overflow-y-auto p-10 space-y-10 bg-white shadow-inner">
 
-  
+  <section class="tab-content" id="news">
+  <h2 class="text-2xl font-bold mb-4">News & Highlights</h2>
+  <ul class="list-disc pl-5 text-sm space-y-2">
+    <li><strong>May 2025:</strong> Presented at GLBIO 2025 (Talk)</li>
+    <li><strong>Feb 2025:</strong> Poster at GRAD Symposium, UND</li>
+    <li><strong>Jan 2025:</strong> Paper accepted in <em>Bioinformatics Advances</em></li>
+    <li><strong>Oct 2024:</strong> Abstract selected at ISV Annual Congress</li>
+  </ul>
+</section>
+
 
 
 <section class="tab-content active" id="overview">
