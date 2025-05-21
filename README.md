@@ -6,6 +6,7 @@
     <em>University of North Dakota</em>
   </div>
 </div>
+
 ---
 
 Welcome! I’m Hasin Rehana (she/her), a PhD researcher working at the intersection of **Natural Language Processing**, **Biomedical Informatics**, and **Multimodal AI**. My work focuses on developing scalable deep learning pipelines that extract, represent, and integrate insights from biomedical text and imaging data to support clinical decision-making.
