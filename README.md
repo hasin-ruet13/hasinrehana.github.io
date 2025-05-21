@@ -1,6 +1,8 @@
-# 👩‍🔬 Hasin Rehana
+<img src="profile.jpg" alt="Hasin Rehana" width="140" align="left" style="border-radius: 50%; margin-right: 20px;"/>
 
-**PhD Candidate | Biomedical NLP | Multimodal Deep Learning | University of North Dakota**
+# Hasin Rehana
+**PhD Candidate | Biomedical NLP | Multimodal Deep Learning**  
+_University of North Dakota_ 
 
 Welcome! I’m Hasin Rehana (she/her), a PhD researcher working at the intersection of **Natural Language Processing**, **Biomedical Informatics**, and **Multimodal AI**. My work focuses on developing scalable deep learning pipelines that extract, represent, and integrate insights from biomedical text and imaging data to support clinical decision-making.
 
