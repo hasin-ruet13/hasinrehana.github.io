@@ -17,17 +17,17 @@ Welcome! I’m Hasin Rehana (she/her), a PhD researcher working at the intersect
 
 🔬 My research brings together Large Language Models (LLMs) like **BERT, GPT, and LLaMA** with real-world biomedical challenges such as:
 
-- 🧬 **Named Entity Recognition (NER)** for vaccine adjuvants and proteins
-- 🔄 **Relation Extraction** for protein–protein and drug–disease interactions
-- 🩻 **Multimodal Learning** combining CT imaging with EHR text for surgical planning
+- 🧬 **Named Entity Recognition (NER)** for vaccine adjuvants and proteins  
+- 🔄 **Relation Extraction** for protein–protein and drug–disease interactions  
+- 🩻 **Multimodal Learning** combining CT imaging with EHR text for surgical planning  
 
 ---
 
 ### 🧠 Current Focus
 
-- Developing a **multimodal AI framework** for risk prediction in high-stakes procedures like TAVR
-- Leveraging LLMs for **biomedical literature mining** and **clinical knowledge graph construction**
-- Fine-tuning transformer models in **low-resource biomedical NLP settings**
+- Developing a **multimodal AI framework** for risk prediction in high-stakes procedures like TAVR  
+- Leveraging LLMs for **biomedical literature mining** and **clinical knowledge graph construction**  
+- Fine-tuning transformer models in **low-resource biomedical NLP settings**  
 
 ---
 
@@ -35,7 +35,7 @@ Welcome! I’m Hasin Rehana (she/her), a PhD researcher working at the intersect
 
 - [`PPI-GPT-BERT`](https://github.com/hasin-ruet13/PPI-GPT-BERT): GPT vs BERT for biomedical protein–protein interaction extraction  
 - [`Nested-NER-BERT`](https://github.com/hasin-ruet13/Nested-NER-BERT): Multilayer transformer-based model for nested biomedical entities  
-- [`CancerVax-LLM`](https://github.com/hasin-ruet13): LLM pipeline for vaccine adjuvant extraction from biomedical literature (coming soon)
+- [`CancerVax-LLM`](https://github.com/hasin-ruet13): LLM pipeline for vaccine adjuvant extraction from biomedical literature *(coming soon)*  
 
 ---
 
@@ -45,7 +45,7 @@ Welcome! I’m Hasin Rehana (she/her), a PhD researcher working at the intersect
 - 📄 *Bioinformatics Advances*: [Evaluating GPT and BERT for Protein–Protein Interaction Extraction](https://doi.org/10.1093/bioadv/vbae133)  
 - 📝 *CLEF 2024*: Nested Named Entity Recognition using BERT  
 
-See [Google Scholar](https://scholar.google.com/citations?user=q6tQJu0AAAAJ&hl=en) for full list.
+See my full [Google Scholar profile](https://scholar.google.com/citations?user=q6tQJu0AAAAJ&hl=en) for more.
 
 ---
 
@@ -59,4 +59,3 @@ See [Google Scholar](https://scholar.google.com/citations?user=q6tQJu0AAAAJ&hl=e
 ---
 
 *Let’s build interpretable, inclusive AI for better biomedical understanding.*
-
