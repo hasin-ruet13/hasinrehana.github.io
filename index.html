@@ -8,9 +8,11 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
-  <!-- small guard so desktop doesn't show mobile menu if CSS fails -->
-  <style>.hr-mobile-menu{display:none}.hr-socials .hr-sbtn{text-decoration:none}</style>
-  <link rel="stylesheet" href="assets/css/style.css?v=4.1" />
+  <!-- If CSS fails, prevent mobile menu from showing -->
+  <style>#hrMobileMenu{display:none}</style>
+
+  <!-- Cache-busted CSS -->
+  <link rel="stylesheet" href="assets/css/style.css?v=4.3" />
 </head>
 <body>
   <!-- Header -->
@@ -71,7 +73,7 @@
           <a class="hr-sbtn" href="mailto:hasin.rehana@und.edu" title="Email">
             <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M20 4H4a2 2 0 00-2 2v12a2 2 0 002 2h16a2 2 0 002-2V6a2 2 0 00-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
           </a>
-          <!-- Google Scholar (clean cap icon) -->
+          <!-- Google Scholar -->
           <a class="hr-sbtn" href="https://scholar.google.com/citations?user=q6tQJu0AAAAJ&hl=en&authuser=4" target="_blank" rel="noopener" title="Google Scholar">
             <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
               <path d="M12 3l9 5-9 5-9-5 9-5zm-6 9l6 3 6-3v3l-6 3-6-3v-3z"/>
@@ -177,9 +179,7 @@
 
       <div class="subgroup">
         <div class="subhead">Under Review</div>
-        <ul>
-          <li>—</li>
-        </ul>
+        <ul><li>—</li></ul>
       </div>
 
       <div class="subgroup">
@@ -294,7 +294,7 @@
       hrMenu.classList.remove('open'); hrBurger.setAttribute('aria-expanded','false');
     }));
 
-    // ===== Header shadow and active nav link =====
+    // ===== Header shadow + active link =====
     const hrHeader = document.querySelector('.hr-header');
     addEventListener('scroll', () => hrHeader.classList.toggle('scrolled', scrollY > 2));
 
@@ -321,19 +321,17 @@
     }, { rootMargin: '-45% 0px -50% 0px', threshold: 0.01 });
     hrSections.forEach(s => hrIO.observe(s));
 
-    // ===== Build simple search index =====
+    // ===== Build search index =====
     const hrIndex = [];
     function hrAdd(el, label, href){
       const text = el.textContent.replace(/\s+/g,' ').trim();
       if (text.length < 2) return;
       hrIndex.push({ text, label, href });
     }
-    // Section titles
     document.querySelectorAll('section[id] .h-title').forEach(h=>{
       const sec = h.closest('section[id]');
       hrAdd(h, 'Section', `#${sec.id}`);
     });
-    // Major lists
     document.querySelectorAll('#news li, #publications li, #experience li, #awards li, #talks li, #service li').forEach((li,i)=>{
       if (!li.id) li.id = 'it-' + i + '-' + Math.random().toString(36).slice(2,7);
       const sec = li.closest('section[id]').id;
@@ -357,7 +355,7 @@
       return text.slice(0,i)+'<mark>'+text.slice(i,i+q.length)+'</mark>'+text.slice(i+q.length);
     }
 
-    // ===== Anish-style full-screen search wiring =====
+    // ===== Full-screen search wiring =====
     const aniSearch = document.getElementById('aniSearch');
     const aniOpenBtn = document.getElementById('hrOpenSearch');
     const aniCloseBtn = document.getElementById('aniClose');
@@ -401,7 +399,6 @@
 
     aniField.addEventListener('input', ()=> aniRender(hrSearch(aniField.value)));
 
-    // keyboard nav
     aniField.addEventListener('keydown', (e)=>{
       const items=[...aniResults.querySelectorAll('.item')];
       if (!items.length) return;
