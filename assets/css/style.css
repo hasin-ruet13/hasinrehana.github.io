@@ -204,6 +204,73 @@ a:hover{text-decoration:underline}
   .hr-hide-desktop{display:grid}
 }
 
+
+
+/* ===========================
+   Timeline cards (Anish-style)
+   =========================== */
+.exp-grid{
+  display:grid;
+  grid-template-columns: 360px 1fr;
+  gap: 36px;
+  align-items:start;
+}
+@media (max-width: 980px){
+  .exp-grid{ grid-template-columns: 1fr; }
+}
+
+.exp-title .h-title{ line-height: 1.05; }
+
+.exp-timeline{
+  position:relative;
+  padding-left: 56px;         /* room for dots */
+}
+@media (max-width: 540px){
+  .exp-timeline{ padding-left: 42px; }
+}
+
+/* vertical rail */
+.exp-rail{
+  position:absolute; left: 24px; top: 4px; bottom: 4px;
+  width: 4px; border-radius: 2px;
+  background: #c7d2fe;             /* soft indigo */
+}
+:root.dark .exp-rail{ background:#334155; }
+
+/* each item */
+.exp-item{ position:relative; margin: 22px 0 36px; }
+.exp-dot{
+  position:absolute; left: 16px; top: 8px;
+  width: 24px; height: 24px; border-radius: 999px;
+  border: 4px solid #ffffff; background: #6366f1; box-shadow: var(--shadow);
+}
+:root.dark .exp-dot{ border-color:#0e131a; }
+
+/* card */
+.exp-card{
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  box-shadow: var(--shadow);
+  padding: 18px 20px;
+}
+.exp-role{
+  font-size: 20px; font-weight: 800; margin-bottom: 4px; color: var(--text);
+}
+.exp-place{
+  font-size: 16px; font-weight: 600; margin-bottom: 2px;
+}
+.exp-place a{ color: var(--text); text-decoration: none; }
+.exp-place a:hover{ color: var(--link); text-decoration: underline; }
+.exp-meta{
+  color: var(--muted); font-weight: 600; margin-bottom: 10px;
+}
+.exp-desc{ margin: 0; }
+
+
+
+
+
 /* ===== HARD OVERRIDE to ensure mobile menu never shows unless opened ===== */
 header .hr-mobile-menu { display: none !important; }
 header .hr-mobile-menu.open { display: flex !important; }
