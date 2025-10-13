@@ -8,114 +8,95 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
-  <!-- Minimal critical CSS guard -->
-  <style>.mobile-menu{display:none}.socials .sbtn{text-decoration:none}</style>
-  <link rel="stylesheet" href="assets/css/style.css?v=3.6" />
+  <!-- small guard so desktop doesn't show mobile menu if CSS fails -->
+  <style>.hr-mobile-menu{display:none}.hr-socials .hr-sbtn{text-decoration:none}</style>
+  <link rel="stylesheet" href="assets/css/style.css?v=4.1" />
 </head>
 <body>
-  <!-- Sticky Header -->
-  <header class="site-header">
-    <div class="container nav-row">
-      <a class="brand" href="#home">Hasin Rehana</a>
+  <!-- Header -->
+  <header class="hr-header">
+    <div class="hr-container hr-nav">
+      <a class="hr-brand" href="#home">Hasin Rehana</a>
 
-      <nav class="nav-links" aria-label="Primary">
-        <a href="#home" class="nav-link">Home</a>
-        <a href="#news" class="nav-link">News</a>
-        <a href="#publications" class="nav-link">Publications</a>
-        <a href="#experience" class="nav-link">Experience</a>
-        <a href="#awards" class="nav-link">Awards</a>
-        <a href="#talks" class="nav-link">Talks</a>
-        <a href="HasinRehana_CV.pdf" class="nav-link" target="_blank" rel="noopener">CV</a>
+      <nav class="hr-navlinks" aria-label="Primary">
+        <a href="#home" class="hr-navlink">Home</a>
+        <a href="#news" class="hr-navlink">News</a>
+        <a href="#publications" class="hr-navlink">Publications</a>
+        <a href="#experience" class="hr-navlink">Experience</a>
+        <a href="#awards" class="hr-navlink">Awards</a>
+        <a href="#talks" class="hr-navlink">Talks</a>
+        <a href="#service" class="hr-navlink">Service</a>
+        <a href="CV_HasinRehana.pdf" class="hr-navlink" target="_blank" rel="noopener">CV</a>
       </nav>
 
-<!-- Full-screen search (Anish-style) -->
-<div id="aniSearch" class="ani-search" aria-hidden="true" role="dialog" aria-label="Site search">
-  <button id="aniClose" class="ani-x" title="Close" aria-label="Close search">
-    ✕
-  </button>
-
-  <div class="ani-wrap">
-    <h1 class="ani-title">Search</h1>
-
-    <div class="ani-input">
-      <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
-        <path d="M15.5 14h-.79l-.28-.27A6.5 6.5 0 109.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 5L20.49 19l-5-5z"/>
-      </svg>
-      <input id="aniField" type="search" placeholder="Search…" autocomplete="off" />
+      <div class="hr-actions">
+        <button id="hrOpenSearch" class="hr-ibtn" title="Search ( / )" aria-label="Search">
+          <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M15.5 14h-.79l-.28-.27A6.5 6.5 0 109.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 5L20.49 19l-5-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
+        </button>
+        <button id="hrTheme" class="hr-ibtn" title="Toggle dark mode" aria-label="Toggle theme">
+          <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M21 12.79A9 9 0 1111.21 3a7 7 0 109.79 9.79z"/></svg>
+        </button>
+        <button id="hrBurger" class="hr-ibtn hr-hide-desktop" aria-label="Menu" aria-expanded="false">
+          <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+        </button>
+      </div>
     </div>
 
-    <ul id="aniResults" class="ani-results" role="listbox" aria-label="Search results"></ul>
-    <div class="ani-hint">↑/↓ to navigate • Enter to open • Esc to close</div>
-  </div>
-</div>
-
-
-    <!-- Mobile menu -->
-    <nav id="mobileMenu" class="mobile-menu" aria-label="Mobile">
-      <a href="#home" class="mobile-link">Home</a>
-      <a href="#news" class="mobile-link">News</a>
-      <a href="#publications" class="mobile-link">Publications</a>
-      <a href="#experience" class="mobile-link">Experience</a>
-      <a href="#awards" class="mobile-link">Awards</a>
-      <a href="#talks" class="mobile-link">Talks</a>
-      <a href="HasinRehana_CV.pdf" class="mobile-link" target="_blank" rel="noopener">CV</a>
+    <!-- Mobile -->
+    <nav id="hrMobileMenu" class="hr-mobile-menu" aria-label="Mobile">
+      <a href="#home" class="hr-mlink">Home</a>
+      <a href="#news" class="hr-mlink">News</a>
+      <a href="#publications" class="hr-mlink">Publications</a>
+      <a href="#experience" class="hr-mlink">Experience</a>
+      <a href="#awards" class="hr-mlink">Awards</a>
+      <a href="#talks" class="hr-mlink">Talks</a>
+      <a href="#service" class="hr-mlink">Service</a>
+      <a href="CV_HasinRehana.pdf" class="hr-mlink" target="_blank" rel="noopener">CV</a>
     </nav>
   </header>
 
   <main>
-    <!-- HERO / ABOUT -->
-    <section id="home" class="section container hero-grid">
-      <!-- Left column -->
-      <aside class="bio-card">
-        <img src="profile.jpg" alt="Hasin Rehana" class="avatar" />
-        <h1 class="display-name">Hasin Rehana</h1>
-        <div class="role">Computer Science PhD Researcher</div>
-        <a class="affil" href="https://med.und.edu/research/labs/hur/index.html" target="_blank" rel="noopener">
+    <!-- HERO -->
+    <section id="home" class="hr-section hr-container hr-hero">
+      <aside class="hr-bio">
+        <img src="profile.jpg" alt="Hasin Rehana" class="hr-avatar" />
+        <h1 class="hr-name">Hasin Rehana</h1>
+        <div class="hr-role">Computer Science PhD Researcher</div>
+        <a class="hr-affil" href="https://med.und.edu/research/labs/hur/index.html" target="_blank" rel="noopener">
           University of North Dakota — Hur Lab
         </a>
 
-        <div class="socials" aria-label="Contact and profiles">
+        <div class="hr-socials" aria-label="Contact and profiles">
           <!-- Email -->
-          <a class="sbtn" href="mailto:hasin.rehana@und.edu" title="Email">
-            <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
-              <path d="M20 4H4a2 2 0 00-2 2v12a2 2 0 002 2h16a2 2 0 002-2V6a2 2 0 00-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
-            </svg>
+          <a class="hr-sbtn" href="mailto:hasin.rehana@und.edu" title="Email">
+            <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M20 4H4a2 2 0 00-2 2v12a2 2 0 002 2h16a2 2 0 002-2V6a2 2 0 00-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
           </a>
-          <!-- Google Scholar (graduation-cap icon) -->
-          <a class="sbtn" href="https://scholar.google.com/citations?user=q6tQJu0AAAAJ&hl=en&authuser=4" target="_blank" rel="noopener" title="Google Scholar">
-            <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
+          <!-- Google Scholar (clean cap icon) -->
+          <a class="hr-sbtn" href="https://scholar.google.com/citations?user=q6tQJu0AAAAJ&hl=en&authuser=4" target="_blank" rel="noopener" title="Google Scholar">
+            <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
               <path d="M12 3l9 5-9 5-9-5 9-5zm-6 9l6 3 6-3v3l-6 3-6-3v-3z"/>
               <path d="M7 19h10v2H7z"/>
             </svg>
           </a>
           <!-- GitHub -->
-          <a class="sbtn" href="https://github.com/hasin-ruet13" target="_blank" rel="noopener" title="GitHub">
-            <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
-              <path d="M12 .5a12 12 0 00-3.79 23.4c.6.11.82-.26.82-.58v-2.2c-3.34.73-4.04-1.6-4.04-1.6-.55-1.4-1.35-1.77-1.35-1.77-1.1-.76.08-.74.08-.74 1.22.09 1.86 1.25 1.86 1.25 1.08 1.85 2.83 1.31 3.52 1 .11-.79.42-1.31.76-1.61-2.67-.3-5.48-1.33-5.48-5.93 0-1.31.47-2.38 1.24-3.22-.12-.3-.54-1.5.12-3.14 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 016 0c2.29-1.55 3.3-1.23 3.3-1.23.66 1.64.24 2.84.12 3.14.77.84 1.24 1.91 1.24 3.22 0 4.61-2.81 5.63-5.49 5.93.43.37.81 1.1.81 2.22v3.29c0 .32.22.7.82.58A12 12 0 0012 .5z"/>
-            </svg>
+          <a class="hr-sbtn" href="https://github.com/hasin-ruet13" target="_blank" rel="noopener" title="GitHub">
+            <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M12 .5a12 12 0 00-3.79 23.4c.6.11.82-.26.82-.58v-2.2c-3.34.73-4.04-1.6-4.04-1.6-.55-1.4-1.35-1.77-1.35-1.77-1.1-.76.08-.74.08-.74 1.22.09 1.86 1.25 1.86 1.25 1.08 1.85 2.83 1.31 3.52 1 .11-.79.42-1.31.76-1.61-2.67-.3-5.48-1.33-5.48-5.93 0-1.31.47-2.38 1.24-3.22-.12-.3-.54-1.5.12-3.14 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 016 0c2.29-1.55 3.3-1.23 3.3-1.23.66 1.64.24 2.84.12 3.14.77.84 1.24 1.91 1.24 3.22 0 4.61-2.81 5.63-5.49 5.93.43.37.81 1.1.81 2.22v3.29c0 .32.22.7.82.58A12 12 0 0012 .5z"/></svg>
           </a>
           <!-- LinkedIn -->
-          <a class="sbtn" href="https://www.linkedin.com/in/hasin-rehana-580184140" target="_blank" rel="noopener" title="LinkedIn">
-            <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
-              <path d="M4.98 3.5a2.5 2.5 0 11-.02 5 2.5 2.5 0 01.02-5zM3 8.98h4v12H3zM9 8.98h3.84v1.64h.06c.53-1 1.83-2.06 3.76-2.06 4.02 0 4.76 2.65 4.76 6.1v6.32h-4v-5.6c0-1.34-.02-3.07-1.87-3.07-1.88 0-2.17 1.46-2.17 2.97v5.7H9z"/>
-            </svg>
+          <a class="hr-sbtn" href="https://www.linkedin.com/in/hasin-rehana-580184140" target="_blank" rel="noopener" title="LinkedIn">
+            <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 11-.02 5 2.5 2.5 0 01.02-5zM3 8.98h4v12H3zM9 8.98h3.84v1.64h.06c.53-1 1.83-2.06 3.76-2.06 4.02 0 4.76 2.65 4.76 6.1v6.32h-4v-5.6c0-1.34-.02-3.07-1.87-3.07-1.88 0-2.17 1.46-2.17 2.97v5.7H9z"/></svg>
           </a>
           <!-- ResearchGate -->
-          <a class="sbtn" href="https://www.researchgate.net/profile/Hasin_Rehana" target="_blank" rel="noopener" title="ResearchGate">
-            <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
-              <path d="M4 3h10a5 5 0 010 10H9v8H4zM9 8h5a1 1 0 000-2H9z"/>
-            </svg>
+          <a class="hr-sbtn" href="https://www.researchgate.net/profile/Hasin_Rehana" target="_blank" rel="noopener" title="ResearchGate">
+            <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M4 3h10a5 5 0 010 10H9v8H4zM9 8h5a1 1 0 000-2H9z"/></svg>
           </a>
           <!-- CV -->
-          <a class="sbtn" href="HasinRehana_CV.pdf" target="_blank" rel="noopener" title="CV (PDF)">
-            <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
-              <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8zm0 0l6 6M8 13h8M8 17h8M8 9h4"/>
-            </svg>
+          <a class="hr-sbtn" href="CV_HasinRehana.pdf" target="_blank" rel="noopener" title="CV (PDF)">
+            <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8zm0 0l6 6M8 13h8M8 17h8M8 9h4"/></svg>
           </a>
         </div>
       </aside>
 
-      <!-- Right column -->
       <div class="about">
         <h2 class="h-title">About Me</h2>
         <p>
@@ -135,67 +116,102 @@
           My first-author publications appear in venues such as <em>Bioinformatics Advances</em>, and I have contributed as a
           co-author to collaborative studies in <em>BMC Public Health</em>.
         </p>
-        <p class="updated">Updated May 2025</p>
+        <p class="updated">Updated October 2025</p>
       </div>
     </section>
 
     <!-- NEWS -->
-    <section id="news" class="section container">
+    <section id="news" class="hr-section hr-container">
       <h2 class="h-title">News</h2>
       <ul class="timeline">
-        <li><span class="time">May 2025</span> — Presented “Identifying Cancer Vaccine Adjuvants using LLMs” at GLBIO 2025.</li>
-        <li><span class="time">Feb 2025</span> — Poster accepted at UND GRAD Symposium on Nested NER with Transformers.</li>
+        <li><span class="time">Nov 2025</span> — Paper accepted to <strong>AMIA Annual Symposium 2025</strong>: “Leveraging LLMs for cancer vaccine adjuvant name extraction.”</li>
+        <li><span class="time">Jun 2025</span> — Joined <strong>Sanford Research</strong> as Clinical Research Study Team Member (TAVR risk prediction with multimodal AI).</li>
+        <li><span class="time">May 2025</span> — GLBIO 2025 talk: “Identifying Cancer Vaccine Adjuvants using LLMs.”</li>
         <li><span class="time">Oct 2024</span> — Abstract selected at ISV Annual Congress 2024 on LLMs in vaccine discovery.</li>
         <li><span class="time">Sep 2024</span> — First-author paper in <em>Bioinformatics Advances</em> on PPI identification using LLMs.</li>
       </ul>
     </section>
 
     <!-- PUBLICATIONS -->
-    <section id="publications" class="section container">
+    <section id="publications" class="hr-section hr-container">
       <h2 class="h-title">Publications</h2>
       <p class="muted-line">Visit <a href="https://scholar.google.com/citations?user=q6tQJu0AAAAJ&hl=en&authuser=4" target="_blank" rel="noopener">Google Scholar</a> for a full list.</p>
       <ol class="pubs">
-        <li>Evaluating GPT and BERT models for protein–protein interaction identification in biomedical text — <em>Bioinformatics Advances</em>, 2024 <a class="ext" href="https://doi.org/10.1093/bioadv/vbae133" target="_blank" rel="noopener">DOI</a></li>
-        <li>Nested named entity recognition using multilayer BERT-based model — CLEF, 2024 <a class="ext" href="https://ceur-ws.org/Vol-3740/paper-18.pdf" target="_blank" rel="noopener">PDF</a></li>
-        <li>Adverse childhood experiences and chronic health outcomes — <em>BMC Public Health</em>, 2025 <a class="ext" href="https://doi.org/10.1186/s12889-025-22785-2" target="_blank" rel="noopener">DOI</a></li>
-        <li>Core ontologies and signature genes of pulmonary disease — <em>Gene Reports</em>, 2021 <a class="ext" href="https://doi.org/10.1016/j.genrep.2021.101206" target="_blank" rel="noopener">DOI</a></li>
-        <li>Risk predictive framework for Gynecologic Cancer — <em>BMC Bioinformatics</em>, 2021 <a class="ext" href="https://doi.org/10.1186/s12859-021-04131-6" target="_blank" rel="noopener">DOI</a></li>
-        <li>Protein interaction network & drug design of stomach cancer — <em>J. Proteins and Proteomics</em>, 2021 <a class="ext" href="https://doi.org/10.1007/s42485-020-00054-7" target="_blank" rel="noopener">DOI</a></li>
-        <li>3D–2D BCNN for Hyperspectral Imaging — ICIEV & icIVPR, 2021 <a class="ext" href="https://doi.org/10.1109/ICIEVicIVPR52578.2021.9563967" target="_blank" rel="noopener">DOI</a></li>
-        <li>Bangla handwritten digit recognition — EICT, 2017 <a class="ext" href="https://doi.org/10.1109/EICT.2017.8275203" target="_blank" rel="noopener">DOI</a></li>
+        <li>H. Rehana, J. Zheng, F.-Y. Yeh, B. Bansal, N.B. Çam, C. Jemiyo, B. McGregor, A. Özgür, Y. He, J. Hur (2025).
+          <strong>Leveraging large language models for cancer vaccine adjuvant name extraction from biomedical literature</strong>.
+          <em>Proceedings of the AMIA Annual Symposium 2025</em> (Accepted). Atlanta, GA, Nov 15–19, 2025.</li>
+
+        <li>H. Rehana, N.B. Çam, M. Basmaci, J. Zheng, C. Jemiyo, Y. He, A. Özgür, J. Hur (2024).
+          <strong>Evaluating GPT and BERT models for protein–protein interaction identification in biomedical text</strong>.
+          <em>Bioinformatics Advances</em>, 4(1), vbae133.
+          <a class="ext" href="https://doi.org/10.1093/bioadv/vbae133" target="_blank" rel="noopener">DOI</a></li>
+
+        <li>H. Rehana, B. Bansal, N.B. Çam, J. Zheng, Y. He, A. Özgür, J. Hur (2024).
+          <strong>Nested named entity recognition using a multilayer BERT-based model</strong>. CLEF Working Notes.
+          <a class="ext" href="https://ceur-ws.org/Vol-3740/paper-18.pdf" target="_blank" rel="noopener">PDF</a></li>
+
+        <li>C. Jemiyo, B.A. McGregor, H. Rehana, J. Hur (2025).
+          <strong>Adverse childhood experiences and chronic health outcomes …</strong> <em>BMC Public Health</em>, 25(1), 1650.
+          <a class="ext" href="https://doi.org/10.1186/s12889-025-22785-2" target="_blank" rel="noopener">DOI</a></li>
+
+        <li>H. Rehana et al. (2021). <strong>A bioinformatics approach for identification of the core ontologies and signature genes of pulmonary disease …</strong>
+          <em>Gene Reports</em>.
+          <a class="ext" href="https://doi.org/10.1016/j.genrep.2021.101206" target="_blank" rel="noopener">DOI</a></li>
+
+        <li>S. Asaduzzaman et al. (2021). <strong>Machine learning to reveal an astute risk predictive framework for Gynecologic Cancer …</strong>
+          <em>BMC Bioinformatics</em>.
+          <a class="ext" href="https://doi.org/10.1186/s12859-021-04131-6" target="_blank" rel="noopener">DOI</a></li>
+
+        <li>Md. R. Ahmed, H. Rehana, S. Asaduzzaman (2021). <strong>Protein interaction network and drug design of stomach cancer …</strong>
+          <em>Journal of Proteins and Proteomics</em>.
+          <a class="ext" href="https://doi.org/10.1007/s42485-020-00054-7" target="_blank" rel="noopener">DOI</a></li>
+
+        <li>H. Rehana, S. Asaduzzaman, R. Chakma (2021).
+          <strong>3D–2D BCNN … for Hyperspectral Imaging</strong>. ICIEV & icIVPR.
+          <a class="ext" href="https://doi.org/10.1109/ICIEVicIVPR52578.2021.9563967" target="_blank" rel="noopener">DOI</a></li>
+
+        <li>H. Rehana (2017).
+          <strong>Bangla handwritten digit classification and recognition using SVM …</strong> EICT.
+          <a class="ext" href="https://doi.org/10.1109/EICT.2017.8275203" target="_blank" rel="noopener">DOI</a></li>
       </ol>
 
       <div class="subgroup">
         <div class="subhead">Under Review</div>
         <ul>
-          <li>Leveraging LLMs for cancer vaccine adjuvant name extraction — submitted to AMIA 2025.</li>
+          <li>—</li>
         </ul>
       </div>
 
       <div class="subgroup">
         <div class="subhead">Preprints</div>
         <ul>
-          <li>Cancer vaccine adjuvant name recognition using LLMs <a class="ext" href="https://doi.org/10.48550/arXiv.2502.09659" target="_blank" rel="noopener">arXiv</a></li>
-          <li>Ontology-based PPI explanation using LLMs <a class="ext" href="https://doi.org/10.1101/2025.04.07.647599" target="_blank" rel="noopener">bioRxiv</a></li>
-          <li>Plant disease detection using R-CNN <a class="ext" href="https://doi.org/10.48550/arXiv.2303.09063" target="_blank" rel="noopener">arXiv</a></li>
+          <li>J. Zheng, A.Y. Lin, A. Huffman, <em>…</em>, H. Rehana, <em>…</em>, Y. He, et al. (2025).
+            <strong>VO: The Vaccine Ontology</strong>. bioRxiv.
+            <a class="ext" href="https://doi.org/10.1101/2025.08.12.669998" target="_blank" rel="noopener">DOI</a></li>
+          <li>N.B. Çam, H. Rehana, J. Zheng, <em>…</em> (2025). <strong>Ontology-based protein–protein interaction explanation using LLMs</strong>.
+            bioRxiv. <a class="ext" href="https://doi.org/10.1101/2025.04.07.647599" target="_blank" rel="noopener">DOI</a></li>
+          <li>H. Rehana, M. Ibrahim, H. Ali (2023). <strong>Plant disease detection using region-based CNN</strong>. arXiv.
+            <a class="ext" href="https://doi.org/10.48550/arXiv.2303.09063" target="_blank" rel="noopener">arXiv</a></li>
         </ul>
       </div>
     </section>
 
     <!-- EXPERIENCE -->
-    <section id="experience" class="section container">
+    <section id="experience" class="hr-section hr-container">
       <h2 class="h-title">Experience</h2>
       <ul class="bullets">
-        <li>Graduate Research Assistant — University of North Dakota (2023–Present)</li>
-        <li>Lecturer (on leave) — Daffodil International University, Bangladesh</li>
-        <li>Convener — Girls' Computer Programming Club, Daffodil International University</li>
+        <li><strong>Clinical Research Study Team Member</strong> — Sanford Research, Fargo, ND (Jun 2025–Present)</li>
+        <li><strong>Graduate Research Assistant</strong> — University of North Dakota (Jan 2023–Present)</li>
+        <li><strong>Lecturer (on study leave)</strong> — Daffodil International University, Bangladesh</li>
+        <li><strong>Convener</strong> — Girls' Computer Programming Club, DIU</li>
       </ul>
     </section>
 
     <!-- AWARDS -->
-    <section id="awards" class="section container">
+    <section id="awards" class="hr-section hr-container">
       <h2 class="h-title">Awards</h2>
       <ul class="bullets">
+        <li><strong>Challenge Award</strong> — BioASQ12 Task BioNNE 2024, 2nd place (Bilingual, English & Russian Nested NER)</li>
         <li>Travel Award — Data Science Symposium, South Dakota State University (2024)</li>
         <li>Best Poster — Cyber Awareness and Research Symposium (UND, 2023)</li>
         <li>ICT Masters Fellowship — Government of Bangladesh</li>
@@ -204,26 +220,35 @@
     </section>
 
     <!-- TALKS -->
-    <section id="talks" class="section container">
+    <section id="talks" class="hr-section hr-container">
       <h2 class="h-title">Talks & Posters</h2>
       <ul class="bullets">
-        <li>Identifying cancer vaccine adjuvants with LLMs — GLBIO, 2025 (Talk)</li>
-        <li>LLMs for vaccine adjuvants — Frank Low Research Day, UND, 2025 (Poster)</li>
+        <li>Identifying cancer vaccine adjuvants in biomedical literature using LLMs — GLBIO, 2025 (Talk)</li>
+        <li>Cancer vaccine adjuvant name recognition from clinical trial data using LLMs — VDOS Workshop @ ICBO, 2024 (Talk, Virtual)</li>
+        <li>ChatGPT to identify drug–drug interactions from biomedical texts — ICBO VDOS, 2023 (Talk, Virtual)</li>
+        <li>Vaccine adjuvant LLMs — Frank Low Research Day, UND, 2025 (Poster)</li>
         <li>Multilayer BERT for Nested NER — GRAD, UND, 2025 (Poster)</li>
         <li>Adjuvant names from clinical trial data — ND EPSCoR, 2024 (Poster)</li>
-        <li>ISV Annual Congress, 2024 (Poster)</li>
-        <li>VDOS Workshop @ ICBO, 2024 (Talk, Virtual)</li>
-        <li>Drug-drug interactions with LLMs — Frank Low Research Day, UND, 2024 (Poster)</li>
-        <li>NPBS 2024 (Poster)</li>
+        <li>Adjuvant names from clinical trial data — ISV Annual Congress, 2024 (Poster; presented by J. Hur)</li>
+        <li>DDIs with LLMs — Frank Low Research Day, UND, 2024 (Poster)</li>
+        <li>NPBS, 2024 (Poster)</li>
         <li>PPI extraction with LLMs — GRAD, UND, 2024 (Poster)</li>
         <li>SDSU Data Science Symposium, 2024 (Poster)</li>
         <li>Evaluation of GPT-3 on PPI — GRAD, UND, 2023 (Poster)</li>
-        <li>ChatGPT for DDIs — VDOS Workshop @ ICBO, 2023 (Talk, Virtual)</li>
-        <li>PPI identification using GPT — CARS, UND, 2023 (Poster)</li>
+        <li>PPI identification using GPT — CARS, UND, 2023 (Poster; 1st place)</li>
       </ul>
     </section>
 
-    <footer class="container footer">
+    <!-- SERVICE -->
+    <section id="service" class="hr-section hr-container">
+      <h2 class="h-title">Service & Memberships</h2>
+      <ul class="bullets">
+        <li><strong>Reviewer:</strong> Scientific Reports (Springer Nature), 2 manuscripts.</li>
+        <li><strong>Memberships:</strong> IEEE (Student), ACM (Student), ISCB (Student), UND Robotics Club, Engineers Without Borders, ACM Student Chapter.</li>
+      </ul>
+    </section>
+
+    <footer class="hr-container footer">
       <div>© Hasin Rehana — University of North Dakota</div>
       <div class="small-links">
         <a href="https://med.und.edu/research/labs/hur/index.html" target="_blank" rel="noopener">Hur Lab</a>
@@ -233,210 +258,186 @@
     </footer>
   </main>
 
-  <!-- Search modal -->
-  <div id="searchModal" class="search-modal" aria-hidden="true" role="dialog" aria-label="Site search">
-    <div class="search-card">
-      <div class="search-top">
-        <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M15.5 14h-.79l-.28-.27A6.5 6.5 0 109.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 5L20.49 19l-5-5z"/></svg>
-        <input id="searchInput" type="search" placeholder="Search sections, news, publications… (Esc to close)" autocomplete="off" />
-        <button id="closeSearch" class="icon-btn" title="Close" aria-label="Close search">
-          <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M18.3 5.71L12 12l6.3 6.29-1.41 1.41L10.59 13.41 4.29 19.7 2.88 18.3 9.17 12 2.88 5.71 4.29 4.3l6.3 6.29 6.29-6.29z"/></svg>
-        </button>
+  <!-- Full-screen search (Anish style) -->
+  <div id="aniSearch" class="ani-search" aria-hidden="true" role="dialog" aria-label="Site search">
+    <button id="aniClose" class="ani-x" title="Close" aria-label="Close search">✕</button>
+    <div class="ani-wrap">
+      <h1 class="ani-title">Search</h1>
+      <div class="ani-input">
+        <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M15.5 14h-.79l-.28-.27A6.5 6.5 0 109.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 5L20.49 19l-5-5z"/></svg>
+        <input id="aniField" type="search" placeholder="Search…" autocomplete="off" />
       </div>
-      <ul id="searchResults" class="results" role="listbox" aria-label="Search results"></ul>
-      <div class="hint">↑/↓ to navigate • Enter to open • Esc to close</div>
+      <ul id="aniResults" class="ani-results" role="listbox" aria-label="Search results"></ul>
+      <div class="ani-hint">↑/↓ to navigate • Enter to open • Esc to close</div>
     </div>
   </div>
 
   <script>
-    // theme
-    const toggle = document.getElementById('themeToggle');
-    const stored = localStorage.getItem('theme');
-    if (stored === 'dark') document.documentElement.classList.add('dark');
-    toggle.addEventListener('click', () => {
+    // ===== Theme toggle =====
+    const hrThemeBtn = document.getElementById('hrTheme');
+    const hrStored = localStorage.getItem('theme');
+    if (hrStored === 'dark') document.documentElement.classList.add('dark');
+    hrThemeBtn.addEventListener('click', () => {
       document.documentElement.classList.toggle('dark');
-      localStorage.setItem('theme', document.documentElement.classList.contains('dark') ? 'dark' : 'light');
+      localStorage.setItem('theme',
+        document.documentElement.classList.contains('dark') ? 'dark' : 'light');
     });
 
-    // mobile menu
-    const burger = document.getElementById('hamburger');
-    const menu = document.getElementById('mobileMenu');
-    burger.addEventListener('click', () => {
-      const open = menu.classList.toggle('open');
-      burger.setAttribute('aria-expanded', open ? 'true' : 'false');
+    // ===== Mobile menu =====
+    const hrBurger = document.getElementById('hrBurger');
+    const hrMenu = document.getElementById('hrMobileMenu');
+    hrBurger.addEventListener('click', () => {
+      const open = hrMenu.classList.toggle('open');
+      hrBurger.setAttribute('aria-expanded', open ? 'true' : 'false');
     });
-    menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
-      menu.classList.remove('open'); burger.setAttribute('aria-expanded','false');
+    hrMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+      hrMenu.classList.remove('open'); hrBurger.setAttribute('aria-expanded','false');
     }));
 
-    // header shadow
-    const header = document.querySelector('.site-header');
-    addEventListener('scroll', () => header.classList.toggle('scrolled', scrollY > 2));
+    // ===== Header shadow and active nav link =====
+    const hrHeader = document.querySelector('.hr-header');
+    addEventListener('scroll', () => hrHeader.classList.toggle('scrolled', scrollY > 2));
 
-    // smooth scroll + active link
-    const headerH = 72;
-    const navLinks = [...document.querySelectorAll('.nav-link')];
+    const hrHeaderH = 72;
+    const hrLinks = [...document.querySelectorAll('.hr-navlink')];
     document.querySelectorAll('a[href^="#"]').forEach(a => {
       a.addEventListener('click', (e) => {
         const id = a.getAttribute('href').slice(1);
         const el = document.getElementById(id);
         if (!el) return;
         e.preventDefault();
-        const y = el.getBoundingClientRect().top + window.scrollY - headerH;
+        const y = el.getBoundingClientRect().top + window.scrollY - hrHeaderH;
         window.scrollTo({ top: y, behavior: 'smooth' });
       });
     });
-
-    const sections = [...document.querySelectorAll('section[id]')];
-    const io = new IntersectionObserver((entries) => {
+    const hrSections = [...document.querySelectorAll('section[id]')];
+    const hrIO = new IntersectionObserver((entries) => {
       entries.forEach(ent => {
         if (ent.isIntersecting) {
           const id = ent.target.id;
-          navLinks.forEach(l => l.classList.toggle('active', l.getAttribute('href') === `#${id}`));
+          hrLinks.forEach(l => l.classList.toggle('active', l.getAttribute('href') === `#${id}`));
         }
       });
     }, { rootMargin: '-45% 0px -50% 0px', threshold: 0.01 });
-    sections.forEach(s => io.observe(s));
+    hrSections.forEach(s => hrIO.observe(s));
 
-    // -------- Search (works like a mini site search) --------
-    const openBtn = document.getElementById('openSearch');
-    const modal = document.getElementById('searchModal');
-    const closeBtn = document.getElementById('closeSearch');
-    const input = document.getElementById('searchInput');
-    const list = document.getElementById('searchResults');
-
-    function openSearch() {
-      modal.classList.add('open');
-      modal.setAttribute('aria-hidden', 'false');
-      input.value = '';
-      render([]);
-      setTimeout(() => input.focus(), 50);
-    }
-    function closeSearch() {
-      modal.classList.remove('open');
-      modal.setAttribute('aria-hidden', 'true');
-      openBtn.focus();
-    }
-
-    openBtn.addEventListener('click', openSearch);
-    closeBtn.addEventListener('click', closeSearch);
-    document.addEventListener('keydown', (e) => {
-      if (e.key === '/' && !e.metaKey && !e.ctrlKey && !e.altKey) { e.preventDefault(); openSearch(); }
-      if (e.key === 'Escape' && modal.classList.contains('open')) { e.preventDefault(); closeSearch(); }
-    });
-    modal.addEventListener('click', (e) => { if (e.target === modal) closeSearch(); });
-
-    // Build a simple index pulling text + targets
-    const index = [];
-    function addNode(el, label, href) {
+    // ===== Build simple search index =====
+    const hrIndex = [];
+    function hrAdd(el, label, href){
       const text = el.textContent.replace(/\s+/g,' ').trim();
       if (text.length < 2) return;
-      const id = href.startsWith('#') ? href.slice(1) : null;
-      index.push({ text, label, href, id });
+      hrIndex.push({ text, label, href });
     }
-    // sections headings
-    document.querySelectorAll('section[id] .h-title').forEach(h => {
+    // Section titles
+    document.querySelectorAll('section[id] .h-title').forEach(h=>{
       const sec = h.closest('section[id]');
-      addNode(h, 'Section', `#${sec.id}`);
+      hrAdd(h, 'Section', `#${sec.id}`);
     });
-    // list items in content
-    document.querySelectorAll('#news li, #publications li, #experience li, #awards li, #talks li').forEach((li, i) => {
-      if (!li.id) li.id = 'item-' + i + '-' + Math.random().toString(36).slice(2,7);
+    // Major lists
+    document.querySelectorAll('#news li, #publications li, #experience li, #awards li, #talks li, #service li').forEach((li,i)=>{
+      if (!li.id) li.id = 'it-' + i + '-' + Math.random().toString(36).slice(2,7);
       const sec = li.closest('section[id]').id;
-      addNode(li, sec.charAt(0).toUpperCase() + sec.slice(1), `#${li.id}`);
+      hrAdd(li, sec.charAt(0).toUpperCase()+sec.slice(1), `#${li.id}`);
     });
 
-    // very small fuzzy contains (case-insensitive)
-    function search(q) {
+    function hrSearch(q){
       const s = q.toLowerCase().trim();
       if (!s) return [];
       const hits = [];
-      for (const row of index) {
-        const pos = row.text.toLowerCase().indexOf(s);
-        if (pos !== -1) hits.push({ row, pos, score: pos + (row.text.length * 0.001) });
+      for (const row of hrIndex){
+        const p = row.text.toLowerCase().indexOf(s);
+        if (p !== -1) hits.push({ row, p, score: p + row.text.length*0.001 });
       }
       hits.sort((a,b)=>a.score - b.score);
-      return hits.slice(0, 30);
+      return hits.slice(0,40);
     }
-
-    function highlight(text, q) {
+    function hrHL(text,q){
       const i = text.toLowerCase().indexOf(q.toLowerCase());
-      if (i === -1) return text;
-      return text.slice(0,i) + '<mark>' + text.slice(i, i+q.length) + '</mark>' + text.slice(i+q.length);
+      if (i<0) return text;
+      return text.slice(0,i)+'<mark>'+text.slice(i,i+q.length)+'</mark>'+text.slice(i+q.length);
     }
 
-    function render(results) {
-      list.innerHTML = '';
-      results.forEach((hit, idx) => {
-        const li = document.createElement('li');
-        li.className = 'result';
-        li.setAttribute('role','option');
-        li.setAttribute('data-href', hit.row.href);
-        li.innerHTML = `<div class="r-label">${hit.row.label}</div>
-                        <div class="r-text">${highlight(hit.row.text, input.value)}</div>`;
-        if (idx === 0) li.classList.add('active');
-        list.appendChild(li);
-      });
-      if (!results.length) {
-        const li = document.createElement('li');
-        li.className = 'empty';
-        li.textContent = input.value ? 'No matches' : 'Type to search…';
-        list.appendChild(li);
+    // ===== Anish-style full-screen search wiring =====
+    const aniSearch = document.getElementById('aniSearch');
+    const aniOpenBtn = document.getElementById('hrOpenSearch');
+    const aniCloseBtn = document.getElementById('aniClose');
+    const aniField = document.getElementById('aniField');
+    const aniResults = document.getElementById('aniResults');
+
+    function aniOpen(){
+      aniSearch.classList.add('open');
+      aniSearch.setAttribute('aria-hidden','false');
+      aniField.value=''; aniRender([]);
+      setTimeout(()=>aniField.focus(), 30);
+    }
+    function aniClose(){
+      aniSearch.classList.remove('open');
+      aniSearch.setAttribute('aria-hidden','true');
+      aniOpenBtn && aniOpenBtn.focus();
+    }
+    function aniRender(results){
+      aniResults.innerHTML='';
+      if (!results.length){
+        const li=document.createElement('li');
+        li.className='empty'; li.textContent=aniField.value?'No matches':'Type to search…';
+        aniResults.appendChild(li); return;
       }
+      results.forEach((hit,idx)=>{
+        const li=document.createElement('li');
+        li.className='item'+(idx===0?' active':'');
+        li.setAttribute('data-href', hit.row.href);
+        li.innerHTML=`<div class="lab">${hit.row.label}</div>
+                      <div class="txt">${hrHL(hit.row.text, aniField.value)}</div>`;
+        aniResults.appendChild(li);
+      });
     }
 
-    let lastQ = '';
-    input.addEventListener('input', () => {
-      const q = input.value;
-      if (q === lastQ) return;
-      lastQ = q;
-      render(search(q));
+    aniOpenBtn.addEventListener('click', aniOpen);
+    aniCloseBtn.addEventListener('click', aniClose);
+    document.addEventListener('keydown', (e)=>{
+      if (e.key==='/' && !e.metaKey && !e.ctrlKey && !e.altKey){ e.preventDefault(); aniOpen(); }
+      if (e.key==='Escape' && aniSearch.classList.contains('open')){ e.preventDefault(); aniClose(); }
     });
+
+    aniField.addEventListener('input', ()=> aniRender(hrSearch(aniField.value)));
 
     // keyboard nav
-    input.addEventListener('keydown', (e) => {
-      const items = [...list.querySelectorAll('.result')];
-      const current = list.querySelector('.result.active');
-      let idx = items.indexOf(current);
-      if (e.key === 'ArrowDown') { e.preventDefault(); idx = Math.min(items.length-1, idx+1); items.forEach(i=>i.classList.remove('active')); if (items[idx]) items[idx].classList.add('active'); }
-      if (e.key === 'ArrowUp')   { e.preventDefault(); idx = Math.max(0, idx-1); items.forEach(i=>i.classList.remove('active')); if (items[idx]) items[idx].classList.add('active'); }
-      if (e.key === 'Enter' && current) {
+    aniField.addEventListener('keydown', (e)=>{
+      const items=[...aniResults.querySelectorAll('.item')];
+      if (!items.length) return;
+      let idx=items.findIndex(i=>i.classList.contains('active'));
+      if (e.key==='ArrowDown'){ e.preventDefault(); idx=Math.min(items.length-1, idx+1); items.forEach(i=>i.classList.remove('active')); items[idx].classList.add('active'); }
+      if (e.key==='ArrowUp'){ e.preventDefault(); idx=Math.max(0, idx-1); items.forEach(i=>i.classList.remove('active')); items[idx].classList.add('active'); }
+      if (e.key==='Enter'){
         e.preventDefault();
-        const href = current.getAttribute('data-href');
-        closeSearch();
-        if (href.startsWith('#')) {
-          const el = document.querySelector(href);
-          if (el) {
-            const y = el.getBoundingClientRect().top + window.scrollY - headerH;
-            window.scrollTo({ top: y, behavior: 'smooth' });
-          } else {
-            location.href = href;
-          }
-        } else {
-          window.open(href, '_blank', 'noopener');
-        }
+        const cur=aniResults.querySelector('.item.active'); if (!cur) return;
+        const href=cur.getAttribute('data-href'); aniClose();
+        if (href.startsWith('#')){
+          const el=document.querySelector(href);
+          if (el){
+            const y=el.getBoundingClientRect().top + window.scrollY - hrHeaderH;
+            window.scrollTo({ top:y, behavior:'smooth' });
+          } else { location.href=href; }
+        } else { window.open(href,'_blank','noopener'); }
       }
     });
 
-    list.addEventListener('mouseover', (e) => {
-      const li = e.target.closest('.result'); if (!li) return;
-      list.querySelectorAll('.result').forEach(i=>i.classList.remove('active'));
+    aniResults.addEventListener('mouseover',(e)=>{
+      const li=e.target.closest('.item'); if (!li) return;
+      aniResults.querySelectorAll('.item').forEach(i=>i.classList.remove('active'));
       li.classList.add('active');
     });
-    list.addEventListener('click', (e) => {
-      const li = e.target.closest('.result'); if (!li) return;
-      const href = li.getAttribute('data-href');
-      closeSearch();
-      if (href.startsWith('#')) {
-        const el = document.querySelector(href);
-        if (el) {
-          const y = el.getBoundingClientRect().top + window.scrollY - headerH;
-          window.scrollTo({ top: y, behavior: 'smooth' });
-        } else {
-          location.href = href;
-        }
+    aniResults.addEventListener('click',(e)=>{
+      const li=e.target.closest('.item'); if (!li) return;
+      const href=li.getAttribute('data-href'); aniClose();
+      if (href.startsWith('#')){
+        const el=document.querySelector(href);
+        if (el){
+          const y=el.getBoundingClientRect().top + window.scrollY - hrHeaderH;
+          window.scrollTo({ top:y, behavior:'smooth' });
+        } else { location.href=href; }
       } else {
-        window.open(href, '_blank', 'noopener');
+        window.open(href,'_blank','noopener');
       }
     });
   </script>
