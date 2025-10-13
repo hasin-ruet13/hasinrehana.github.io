@@ -8,16 +8,12 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
-  <!-- Tiny critical CSS so desktop never shows mobile menu even if external CSS is cached/missed -->
-  <style>
-    .mobile-menu{display:none}
-    .socials .sbtn{text-decoration:none}
-  </style>
-  <!-- IMPORTANT: relative path (works on project sites) -->
-  <link rel="stylesheet" href="assets/css/style.css?v=3.0" />
+  <!-- Minimal critical CSS guard -->
+  <style>.mobile-menu{display:none}.socials .sbtn{text-decoration:none}</style>
+  <link rel="stylesheet" href="assets/css/style.css?v=3.6" />
 </head>
 <body>
-  <!-- Sticky Header / Navbar -->
+  <!-- Sticky Header -->
   <header class="site-header">
     <div class="container nav-row">
       <a class="brand" href="#home">Hasin Rehana</a>
@@ -29,26 +25,31 @@
         <a href="#experience" class="nav-link">Experience</a>
         <a href="#awards" class="nav-link">Awards</a>
         <a href="#talks" class="nav-link">Talks</a>
-        <!-- If you rename file to HasinRehana_CV.pdf, update this href -->
         <a href="HasinRehana_CV.pdf" class="nav-link" target="_blank" rel="noopener">CV</a>
       </nav>
 
       <div class="nav-actions">
-        <button class="icon-btn" title="Search" aria-hidden="true">
+        <button id="openSearch" class="icon-btn" title="Search ( / )" aria-label="Search">
+          <!-- loupe -->
           <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
             <path d="M15.5 14h-.79l-.28-.27A6.5 6.5 0 109.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 5L20.49 19l-5-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/>
           </svg>
         </button>
         <button id="themeToggle" class="icon-btn" title="Toggle dark mode" aria-label="Toggle theme">
-          <svg viewBox="0 0 24 24" width="20" height="20"><path d="M21 12.79A9 9 0 1111.21 3a7 7 0 109.79 9.79z"/></svg>
+          <!-- moon -->
+          <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
+            <path d="M21 12.79A9 9 0 1111.21 3a7 7 0 109.79 9.79z"/>
+          </svg>
         </button>
         <button id="hamburger" class="icon-btn hide-desktop" aria-label="Menu" aria-expanded="false">
-          <svg viewBox="0 0 24 24" width="22" height="22"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+          <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
+            <path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/>
+          </svg>
         </button>
       </div>
     </div>
 
-    <!-- Mobile menu (hidden by default) -->
+    <!-- Mobile menu -->
     <nav id="mobileMenu" class="mobile-menu" aria-label="Mobile">
       <a href="#home" class="mobile-link">Home</a>
       <a href="#news" class="mobile-link">News</a>
@@ -56,14 +57,14 @@
       <a href="#experience" class="mobile-link">Experience</a>
       <a href="#awards" class="mobile-link">Awards</a>
       <a href="#talks" class="mobile-link">Talks</a>
-      <a href="HasinRehana_CV.pdf.pdf" class="mobile-link" target="_blank" rel="noopener">CV</a>
+      <a href="HasinRehana_CV.pdf" class="mobile-link" target="_blank" rel="noopener">CV</a>
     </nav>
   </header>
 
   <main>
-    <!-- HERO / ABOUT (two-column) -->
+    <!-- HERO / ABOUT -->
     <section id="home" class="section container hero-grid">
-      <!-- Left column: photo + name + affiliation + icons -->
+      <!-- Left column -->
       <aside class="bio-card">
         <img src="profile.jpg" alt="Hasin Rehana" class="avatar" />
         <h1 class="display-name">Hasin Rehana</h1>
@@ -72,37 +73,48 @@
           University of North Dakota — Hur Lab
         </a>
 
-        <div class="socials">
+        <div class="socials" aria-label="Contact and profiles">
           <!-- Email -->
           <a class="sbtn" href="mailto:hasin.rehana@und.edu" title="Email">
-            <svg viewBox="0 0 24 24" width="22" height="22"><path d="M20 4H4a2 2 0 00-2 2v12a2 2 0 002 2h16a2 2 0 002-2V6a2 2 0 00-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+            <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
+              <path d="M20 4H4a2 2 0 00-2 2v12a2 2 0 002 2h16a2 2 0 002-2V6a2 2 0 00-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+            </svg>
           </a>
-          <!-- Scholar -->
+          <!-- Google Scholar (graduation-cap icon) -->
           <a class="sbtn" href="https://scholar.google.com/citations?user=q6tQJu0AAAAJ&hl=en&authuser=4" target="_blank" rel="noopener" title="Google Scholar">
-            <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
-              <path d="M12 2L3 9h6v6l3 3 3-3V9h6zM5 20h14v2H5z"/>
+            <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
+              <path d="M12 3l9 5-9 5-9-5 9-5zm-6 9l6 3 6-3v3l-6 3-6-3v-3z"/>
+              <path d="M7 19h10v2H7z"/>
             </svg>
           </a>
           <!-- GitHub -->
           <a class="sbtn" href="https://github.com/hasin-ruet13" target="_blank" rel="noopener" title="GitHub">
-            <svg viewBox="0 0 24 24" width="22" height="22"><path d="M12 .5a12 12 0 00-3.79 23.4c.6.11.82-.26.82-.58v-2.2c-3.34.73-4.04-1.6-4.04-1.6-.55-1.4-1.35-1.77-1.35-1.77-1.1-.76.08-.74.08-.74 1.22.09 1.86 1.25 1.86 1.25 1.08 1.85 2.83 1.31 3.52 1 .11-.79.42-1.31.76-1.61-2.67-.3-5.48-1.33-5.48-5.93 0-1.31.47-2.38 1.24-3.22-.12-.3-.54-1.5.12-3.14 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 016 0c2.29-1.55 3.3-1.23 3.3-1.23.66 1.64.24 2.84.12 3.14.77.84 1.24 1.91 1.24 3.22 0 4.61-2.81 5.63-5.49 5.93.43.37.81 1.1.81 2.22v3.29c0 .32.22.7.82.58A12 12 0 0012 .5z"/></svg>
+            <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
+              <path d="M12 .5a12 12 0 00-3.79 23.4c.6.11.82-.26.82-.58v-2.2c-3.34.73-4.04-1.6-4.04-1.6-.55-1.4-1.35-1.77-1.35-1.77-1.1-.76.08-.74.08-.74 1.22.09 1.86 1.25 1.86 1.25 1.08 1.85 2.83 1.31 3.52 1 .11-.79.42-1.31.76-1.61-2.67-.3-5.48-1.33-5.48-5.93 0-1.31.47-2.38 1.24-3.22-.12-.3-.54-1.5.12-3.14 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 016 0c2.29-1.55 3.3-1.23 3.3-1.23.66 1.64.24 2.84.12 3.14.77.84 1.24 1.91 1.24 3.22 0 4.61-2.81 5.63-5.49 5.93.43.37.81 1.1.81 2.22v3.29c0 .32.22.7.82.58A12 12 0 0012 .5z"/>
+            </svg>
           </a>
           <!-- LinkedIn -->
           <a class="sbtn" href="https://www.linkedin.com/in/hasin-rehana-580184140" target="_blank" rel="noopener" title="LinkedIn">
-            <svg viewBox="0 0 24 24" width="22" height="22"><path d="M4.98 3.5a2.5 2.5 0 11-.02 5 2.5 2.5 0 01.02-5zM3 8.98h4v12H3zM9 8.98h3.84v1.64h.06c.53-1 1.83-2.06 3.76-2.06 4.02 0 4.76 2.65 4.76 6.1v6.32h-4v-5.6c0-1.34-.02-3.07-1.87-3.07-1.88 0-2.17 1.46-2.17 2.97v5.7H9z"/></svg>
+            <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
+              <path d="M4.98 3.5a2.5 2.5 0 11-.02 5 2.5 2.5 0 01.02-5zM3 8.98h4v12H3zM9 8.98h3.84v1.64h.06c.53-1 1.83-2.06 3.76-2.06 4.02 0 4.76 2.65 4.76 6.1v6.32h-4v-5.6c0-1.34-.02-3.07-1.87-3.07-1.88 0-2.17 1.46-2.17 2.97v5.7H9z"/>
+            </svg>
           </a>
           <!-- ResearchGate -->
           <a class="sbtn" href="https://www.researchgate.net/profile/Hasin_Rehana" target="_blank" rel="noopener" title="ResearchGate">
-            <svg viewBox="0 0 24 24" width="22" height="22"><path d="M4 3h10a5 5 0 010 10H9v8H4zM9 8h5a1 1 0 000-2H9z"/></svg>
+            <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
+              <path d="M4 3h10a5 5 0 010 10H9v8H4zM9 8h5a1 1 0 000-2H9z"/>
+            </svg>
           </a>
           <!-- CV -->
-          <a class="sbtn" href="HasinRehana_CV.pdf.pdf" target="_blank" rel="noopener" title="CV (PDF)">
-            <svg viewBox="0 0 24 24" width="22" height="22"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8zm0 0l6 6M8 13h8M8 17h8M8 9h4"/></svg>
+          <a class="sbtn" href="HasinRehana_CV.pdf" target="_blank" rel="noopener" title="CV (PDF)">
+            <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
+              <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8zm0 0l6 6M8 13h8M8 17h8M8 9h4"/>
+            </svg>
           </a>
         </div>
       </aside>
 
-      <!-- Right column: About -->
+      <!-- Right column -->
       <div class="about">
         <h2 class="h-title">About Me</h2>
         <p>
@@ -140,6 +152,7 @@
     <!-- PUBLICATIONS -->
     <section id="publications" class="section container">
       <h2 class="h-title">Publications</h2>
+      <p class="muted-line">Visit <a href="https://scholar.google.com/citations?user=q6tQJu0AAAAJ&hl=en&authuser=4" target="_blank" rel="noopener">Google Scholar</a> for a full list.</p>
       <ol class="pubs">
         <li>Evaluating GPT and BERT models for protein–protein interaction identification in biomedical text — <em>Bioinformatics Advances</em>, 2024 <a class="ext" href="https://doi.org/10.1093/bioadv/vbae133" target="_blank" rel="noopener">DOI</a></li>
         <li>Nested named entity recognition using multilayer BERT-based model — CLEF, 2024 <a class="ext" href="https://ceur-ws.org/Vol-3740/paper-18.pdf" target="_blank" rel="noopener">PDF</a></li>
@@ -219,18 +232,32 @@
     </footer>
   </main>
 
+  <!-- Search modal -->
+  <div id="searchModal" class="search-modal" aria-hidden="true" role="dialog" aria-label="Site search">
+    <div class="search-card">
+      <div class="search-top">
+        <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M15.5 14h-.79l-.28-.27A6.5 6.5 0 109.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 5L20.49 19l-5-5z"/></svg>
+        <input id="searchInput" type="search" placeholder="Search sections, news, publications… (Esc to close)" autocomplete="off" />
+        <button id="closeSearch" class="icon-btn" title="Close" aria-label="Close search">
+          <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M18.3 5.71L12 12l6.3 6.29-1.41 1.41L10.59 13.41 4.29 19.7 2.88 18.3 9.17 12 2.88 5.71 4.29 4.3l6.3 6.29 6.29-6.29z"/></svg>
+        </button>
+      </div>
+      <ul id="searchResults" class="results" role="listbox" aria-label="Search results"></ul>
+      <div class="hint">↑/↓ to navigate • Enter to open • Esc to close</div>
+    </div>
+  </div>
+
   <script>
-    // Theme toggle
+    // theme
     const toggle = document.getElementById('themeToggle');
     const stored = localStorage.getItem('theme');
     if (stored === 'dark') document.documentElement.classList.add('dark');
     toggle.addEventListener('click', () => {
       document.documentElement.classList.toggle('dark');
-      localStorage.setItem('theme',
-        document.documentElement.classList.contains('dark') ? 'dark' : 'light');
+      localStorage.setItem('theme', document.documentElement.classList.contains('dark') ? 'dark' : 'light');
     });
 
-    // Mobile menu
+    // mobile menu
     const burger = document.getElementById('hamburger');
     const menu = document.getElementById('mobileMenu');
     burger.addEventListener('click', () => {
@@ -238,12 +265,16 @@
       burger.setAttribute('aria-expanded', open ? 'true' : 'false');
     });
     menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
-      menu.classList.remove('open');
-      burger.setAttribute('aria-expanded', 'false');
+      menu.classList.remove('open'); burger.setAttribute('aria-expanded','false');
     }));
 
-    // Smooth scroll + active link
+    // header shadow
+    const header = document.querySelector('.site-header');
+    addEventListener('scroll', () => header.classList.toggle('scrolled', scrollY > 2));
+
+    // smooth scroll + active link
     const headerH = 72;
+    const navLinks = [...document.querySelectorAll('.nav-link')];
     document.querySelectorAll('a[href^="#"]').forEach(a => {
       a.addEventListener('click', (e) => {
         const id = a.getAttribute('href').slice(1);
@@ -255,17 +286,158 @@
       });
     });
 
-    const links = [...document.querySelectorAll('.nav-link')];
     const sections = [...document.querySelectorAll('section[id]')];
     const io = new IntersectionObserver((entries) => {
       entries.forEach(ent => {
         if (ent.isIntersecting) {
           const id = ent.target.id;
-          links.forEach(l => l.classList.toggle('active', l.getAttribute('href') === `#${id}`));
+          navLinks.forEach(l => l.classList.toggle('active', l.getAttribute('href') === `#${id}`));
         }
       });
     }, { rootMargin: '-45% 0px -50% 0px', threshold: 0.01 });
     sections.forEach(s => io.observe(s));
+
+    // -------- Search (works like a mini site search) --------
+    const openBtn = document.getElementById('openSearch');
+    const modal = document.getElementById('searchModal');
+    const closeBtn = document.getElementById('closeSearch');
+    const input = document.getElementById('searchInput');
+    const list = document.getElementById('searchResults');
+
+    function openSearch() {
+      modal.classList.add('open');
+      modal.setAttribute('aria-hidden', 'false');
+      input.value = '';
+      render([]);
+      setTimeout(() => input.focus(), 50);
+    }
+    function closeSearch() {
+      modal.classList.remove('open');
+      modal.setAttribute('aria-hidden', 'true');
+      openBtn.focus();
+    }
+
+    openBtn.addEventListener('click', openSearch);
+    closeBtn.addEventListener('click', closeSearch);
+    document.addEventListener('keydown', (e) => {
+      if (e.key === '/' && !e.metaKey && !e.ctrlKey && !e.altKey) { e.preventDefault(); openSearch(); }
+      if (e.key === 'Escape' && modal.classList.contains('open')) { e.preventDefault(); closeSearch(); }
+    });
+    modal.addEventListener('click', (e) => { if (e.target === modal) closeSearch(); });
+
+    // Build a simple index pulling text + targets
+    const index = [];
+    function addNode(el, label, href) {
+      const text = el.textContent.replace(/\s+/g,' ').trim();
+      if (text.length < 2) return;
+      const id = href.startsWith('#') ? href.slice(1) : null;
+      index.push({ text, label, href, id });
+    }
+    // sections headings
+    document.querySelectorAll('section[id] .h-title').forEach(h => {
+      const sec = h.closest('section[id]');
+      addNode(h, 'Section', `#${sec.id}`);
+    });
+    // list items in content
+    document.querySelectorAll('#news li, #publications li, #experience li, #awards li, #talks li').forEach((li, i) => {
+      if (!li.id) li.id = 'item-' + i + '-' + Math.random().toString(36).slice(2,7);
+      const sec = li.closest('section[id]').id;
+      addNode(li, sec.charAt(0).toUpperCase() + sec.slice(1), `#${li.id}`);
+    });
+
+    // very small fuzzy contains (case-insensitive)
+    function search(q) {
+      const s = q.toLowerCase().trim();
+      if (!s) return [];
+      const hits = [];
+      for (const row of index) {
+        const pos = row.text.toLowerCase().indexOf(s);
+        if (pos !== -1) hits.push({ row, pos, score: pos + (row.text.length * 0.001) });
+      }
+      hits.sort((a,b)=>a.score - b.score);
+      return hits.slice(0, 30);
+    }
+
+    function highlight(text, q) {
+      const i = text.toLowerCase().indexOf(q.toLowerCase());
+      if (i === -1) return text;
+      return text.slice(0,i) + '<mark>' + text.slice(i, i+q.length) + '</mark>' + text.slice(i+q.length);
+    }
+
+    function render(results) {
+      list.innerHTML = '';
+      results.forEach((hit, idx) => {
+        const li = document.createElement('li');
+        li.className = 'result';
+        li.setAttribute('role','option');
+        li.setAttribute('data-href', hit.row.href);
+        li.innerHTML = `<div class="r-label">${hit.row.label}</div>
+                        <div class="r-text">${highlight(hit.row.text, input.value)}</div>`;
+        if (idx === 0) li.classList.add('active');
+        list.appendChild(li);
+      });
+      if (!results.length) {
+        const li = document.createElement('li');
+        li.className = 'empty';
+        li.textContent = input.value ? 'No matches' : 'Type to search…';
+        list.appendChild(li);
+      }
+    }
+
+    let lastQ = '';
+    input.addEventListener('input', () => {
+      const q = input.value;
+      if (q === lastQ) return;
+      lastQ = q;
+      render(search(q));
+    });
+
+    // keyboard nav
+    input.addEventListener('keydown', (e) => {
+      const items = [...list.querySelectorAll('.result')];
+      const current = list.querySelector('.result.active');
+      let idx = items.indexOf(current);
+      if (e.key === 'ArrowDown') { e.preventDefault(); idx = Math.min(items.length-1, idx+1); items.forEach(i=>i.classList.remove('active')); if (items[idx]) items[idx].classList.add('active'); }
+      if (e.key === 'ArrowUp')   { e.preventDefault(); idx = Math.max(0, idx-1); items.forEach(i=>i.classList.remove('active')); if (items[idx]) items[idx].classList.add('active'); }
+      if (e.key === 'Enter' && current) {
+        e.preventDefault();
+        const href = current.getAttribute('data-href');
+        closeSearch();
+        if (href.startsWith('#')) {
+          const el = document.querySelector(href);
+          if (el) {
+            const y = el.getBoundingClientRect().top + window.scrollY - headerH;
+            window.scrollTo({ top: y, behavior: 'smooth' });
+          } else {
+            location.href = href;
+          }
+        } else {
+          window.open(href, '_blank', 'noopener');
+        }
+      }
+    });
+
+    list.addEventListener('mouseover', (e) => {
+      const li = e.target.closest('.result'); if (!li) return;
+      list.querySelectorAll('.result').forEach(i=>i.classList.remove('active'));
+      li.classList.add('active');
+    });
+    list.addEventListener('click', (e) => {
+      const li = e.target.closest('.result'); if (!li) return;
+      const href = li.getAttribute('data-href');
+      closeSearch();
+      if (href.startsWith('#')) {
+        const el = document.querySelector(href);
+        if (el) {
+          const y = el.getBoundingClientRect().top + window.scrollY - headerH;
+          window.scrollTo({ top: y, behavior: 'smooth' });
+        } else {
+          location.href = href;
+        }
+      } else {
+        window.open(href, '_blank', 'noopener');
+      }
+    });
   </script>
 </body>
 </html>
