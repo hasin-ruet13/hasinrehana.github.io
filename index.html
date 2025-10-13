@@ -3,151 +3,326 @@
 <head>
   <meta charset="utf-8"/>
   <title>Hasin Rehana | Academic Profile</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
     body { font-family: 'Inter', sans-serif; }
     .tab-content { display: none; }
     .tab-content.active { display: block; }
   </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 </head>
+<body class="flex min-h-screen">
+  <aside class="w-64 bg-blue-800 text-white flex flex-col justify-between py-6">
+    <div class="flex flex-col items-center space-y-4">
+      <img alt="Profile" class="rounded-full w-28 h-28 border-4 border-white" src="profile.jpg"/>
+      
+      <h1 class="text-xl font-bold text-center mb-0">Hasin Rehana</h1>
+      <p class="text-sm text-center px-1 mt-1">Ph.D. Researcher<br/>Biomedical NLP & AI in Biomedicine</p>
 
-<body class="flex flex-col md:flex-row min-h-screen bg-gray-50">
-  <!-- ===== Mobile Header ===== -->
-  <header class="md:hidden flex justify-between items-center bg-blue-800 text-white p-4 fixed top-0 left-0 w-full z-50">
-    <h1 class="text-lg font-bold">Hasin Rehana</h1>
-    <button id="menu-btn" class="focus:outline-none text-2xl">☰</button>
-  </header>
+      <nav class="w-full mt-4 space-y-1 text-sm">
+        <div class="pl-4 py-1.5 hover:bg-blue-200 cursor-pointer sidebar-link bg-blue-700" onclick="showTab(event, 'overview')">Overview</div>
+        <div class="pl-4 py-1.5 hover:bg-blue-200 cursor-pointer sidebar-link" onclick="showTab(event, 'news')">News & Highlights</div>
 
-  <!-- ===== Sidebar ===== -->
-  <aside id="sidebar"
-    class="w-64 bg-blue-800 text-white flex flex-col justify-between py-5 fixed md:relative md:translate-x-0 transform -translate-x-full md:transform-none transition-transform duration-300 ease-in-out z-40 h-full md:h-auto mt-16 md:mt-0">
-    
-    <div class="flex flex-col items-center space-y-3">
-      <img alt="Profile" class="rounded-full w-24 h-24 border-4 border-white" src="profile.jpg"/>
-      <h1 class="text-lg font-bold text-center mb-0 md:text-xl">Hasin Rehana</h1>
-      <p class="text-sm text-center px-1 mt-1">Ph.D. Researcher<br/>Biomedical NLP & AI</p>
-
-      <!-- Compact Navigation -->
-      <nav class="w-full mt-3 space-y-0 text-sm">
-        <div class="pl-4 py-1 hover:bg-blue-200 cursor-pointer sidebar-link bg-blue-700" onclick="showTab(event, 'overview')">Overview</div>
-        <div class="pl-4 py-1 hover:bg-blue-200 cursor-pointer sidebar-link" onclick="showTab(event, 'news')">News & Highlights</div>
-        <div class="pl-4 py-1 hover:bg-blue-200 cursor-pointer sidebar-link" onclick="showTab(event, 'research')">Research</div>
-        <div class="pl-4 py-1 hover:bg-blue-200 cursor-pointer sidebar-link" onclick="showTab(event, 'education')">Education</div>
-        <div class="pl-4 py-1 hover:bg-blue-200 cursor-pointer sidebar-link" onclick="showTab(event, 'publications')">Publications</div>
-        <div class="pl-4 py-1 hover:bg-blue-200 cursor-pointer sidebar-link" onclick="showTab(event, 'repos')">LLM Repositories</div>
-        <div class="pl-4 py-1 hover:bg-blue-200 cursor-pointer sidebar-link" onclick="showTab(event, 'talks')">Talks & Posters</div>
-        <div class="pl-4 py-1 hover:bg-blue-200 cursor-pointer sidebar-link" onclick="showTab(event, 'experience')">Experience</div>
-        <div class="pl-4 py-1 hover:bg-blue-200 cursor-pointer sidebar-link" onclick="showTab(event, 'skills')">Skills</div>
-        <div class="pl-4 py-1 hover:bg-blue-200 cursor-pointer sidebar-link" onclick="showTab(event, 'awards')">Awards</div>
-        <div class="pl-4 py-1 hover:bg-blue-200 cursor-pointer sidebar-link" onclick="showTab(event, 'contact')">Contact</div>
+        <div class="pl-4 py-1.5 hover:bg-blue-200 cursor-pointer sidebar-link" onclick="showTab(event, 'research')">Research</div>
+        <div class="pl-4 py-1.5 hover:bg-blue-200 cursor-pointer sidebar-link" onclick="showTab(event, 'education')">Education</div>
+        <div class="pl-4 py-1.5 hover:bg-blue-200 cursor-pointer sidebar-link" onclick="showTab(event, 'publications')">Publications</div>
+        <div class="pl-4 py-1.5 hover:bg-blue-200 cursor-pointer sidebar-link" onclick="showTab(event, 'repos')">LLM Repositiories</div>
+        <div class="pl-4 py-1.5 hover:bg-blue-200 cursor-pointer sidebar-link" onclick="showTab(event, 'talks')">Talks & Posters</div>
+        <div class="pl-4 py-1.5 hover:bg-blue-200 cursor-pointer sidebar-link" onclick="showTab(event, 'experience')">Experience</div>
+        <div class="pl-4 py-1.5 hover:bg-blue-200 cursor-pointer sidebar-link" onclick="showTab(event, 'skills')">Skills</div>
+        <div class="pl-4 py-1.5 hover:bg-blue-200 cursor-pointer sidebar-link" onclick="showTab(event, 'awards')">Awards</div>
+        
+        <div class="pl-4 py-1.5 hover:bg-blue-200 cursor-pointer sidebar-link" onclick="showTab(event, 'contact')">Contact</div>
+        
       </nav>
     </div>
-
-    <!-- Links footer -->
-    <div class="flex flex-col items-center text-blue-200 text-xs space-y-1 px-3 pb-3">
-      <div class="flex flex-wrap justify-center gap-2 text-[13px]">
-        <a class="hover:underline" href="https://scholar.google.com/citations?user=q6tQJu0AAAAJ" target="_blank">Scholar</a>
+    <div class="flex flex-col items-center text-blue-200 text-sm space-y-1 px-4">
+      <div class="flex space-x-4">
+        <a class="hover:underline" href="https://scholar.google.com/citations?user=q6tQJu0AAAAJ&amp;hl=en&amp;authuser=4" target="_blank">Scholar</a>
         <a class="hover:underline" href="https://github.com/hasin-ruet13" target="_blank">GitHub</a>
+      </div>
+      <div class="flex space-x-4">
         <a class="hover:underline" href="https://www.linkedin.com/in/hasin-rehana-580184140" target="_blank">LinkedIn</a>
         <a class="hover:underline" href="https://www.researchgate.net/profile/Hasin_Rehana" target="_blank">ResearchGate</a>
+      </div>
+  
+      <div class="flex space-x-4">
         <a class="hover:underline" href="https://med.und.edu/research/labs/hur/index.html" target="_blank">Hur Lab</a>
         <a class="hover:underline" href="https://github.com/hurlab" target="_blank">Hur Lab GitHub</a>
       </div>
     </div>
   </aside>
 
-  <!-- ===== Main Content ===== -->
-  <main class="flex-1 overflow-y-auto p-6 md:p-10 space-y-10 bg-white shadow-inner mt-20 md:mt-0">
-    
-    <!-- === Overview === -->
-    <section class="tab-content active" id="overview">
-      <h2 class="text-2xl font-semibold mb-4">About Me</h2>
-      <p>
-        I am a Ph.D. researcher in Computer Science at the University of North Dakota, specializing in 
-        <em>Biomedical NLP</em>, <em>Large Language Models (LLMs)</em>, and <em>Multimodal Learning</em>. 
-        My work focuses on developing AI solutions for biomedical text and relation mining, with applications 
-        in <em>health informatics</em> and <em>bioinformatics</em>.
-      </p>
-    </section>
 
-    <!-- === News === -->
-    <section class="tab-content" id="news">
-      <h2 class="text-2xl font-bold mb-6">📣 News & Highlights</h2>
-      <div class="bg-blue-50 border-l-4 border-blue-600 p-4 rounded-md shadow-sm">
-        <p class="text-sm text-gray-800">Presented “Identifying Cancer Vaccine Adjuvants using LLMs” at GLBIO 2025</p>
+
+<main class="flex-1 overflow-y-auto p-10 space-y-10 bg-white shadow-inner">
+
+  
+
+
+<section class="tab-content active" id="overview">
+  <h2 class="text-2xl font-semibold mb-4">About Me</h2>
+  <p>
+    I am a Ph.D. researcher in Computer Science at the University of North Dakota, specializing in 
+    <em>Biomedical Natural Language Processing (BioNLP)</em>, 
+    <em>Large Language Models (LLMs)</em>, and 
+    <em>Multimodal Learning</em>. My work focuses on developing state-of-the-art AI solutions 
+    for biomedical text and relation mining, with applications in 
+    <em>health informatics</em> and <em>bioinformatics</em>.
+  </p>
+
+  <p class="mt-4">
+    I design and evaluate BioNLP pipelines using models such as <em>BERT</em>, <em>GPT</em>, 
+    <em>Llama</em>, and <em>Gemini</em>, aiming to accelerate discovery in biomedicine 
+    through automated literature mining and information extraction. I served as the 
+    <em>team lead</em> and <em>first author</em> of a system that was recognized as a 
+    <em>runner-up</em> in the <em>BioASQ BioNNE</em> challenge, with our work 
+    presented at the <em>CLEF 2024</em> Conference. I have also presented at the 
+    <em>Great Lakes Bioinformatics Conference (GLBIO)</em> and university research symposia.
+  </p>
+
+  <p class="mt-4">
+    My first-author publications appear in venues such as <em>Bioinformatics Advances</em>, and I have 
+    contributed as a co-author to collaborative studies published in journals like 
+    <em>BMC Public Health</em>.
+  </p>
+
+  <p class="mt-4">
+    With a strong foundation in <em>machine learning</em>, <em>deep learning</em>, 
+    and <em>biomedical AI</em>, I am passionate about bridging computational methods with 
+    real-world biomedical challenges to uncover novel insights and advance translational research.
+  </p>
+</section>
+
+
+<section class="tab-content" id="news">
+  <h2 class="text-2xl font-bold mb-6">📣 News & Highlights</h2>
+  <div class="space-y-4">
+    <div class="bg-blue-50 border-l-4 border-blue-600 p-4 shadow-sm rounded-md">
+      <div class="flex justify-between items-center">
+        <span class="text-blue-700 font-semibold">May 2025</span>
+        <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded">Talk</span>
       </div>
-    </section>
+      <p class="mt-1 text-sm text-gray-800">Presented “Identifying Cancer Vaccine Adjuvants using LLMs” at GLBIO 2025</p>
+    </div>
 
-    <!-- === Research === -->
-    <section class="tab-content" id="research">
-      <h2 class="text-2xl font-bold mb-4">Research Interests</h2>
-      <ul class="list-disc pl-5 space-y-1">
-        <li>Biomedical NLP (BioNLP)</li>
-        <li>Biomedical relation extraction</li>
-        <li>LLMs in vaccine discovery</li>
-      </ul>
-    </section>
+    <div class="bg-blue-50 border-l-4 border-blue-600 p-4 shadow-sm rounded-md">
+      <div class="flex justify-between items-center">
+        <span class="text-blue-700 font-semibold">Feb 2025</span>
+        <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded">Poster</span>
+      </div>
+      <p class="mt-1 text-sm text-gray-800">Poster accepted at UND GRAD Symposium on Nested NER with Transformers</p>
+    </div>
 
-    <!-- === Education === -->
-    <section class="tab-content" id="education">
-      <h2 class="text-2xl font-bold mb-4">Education</h2>
-      <ul class="list-disc pl-5 space-y-2">
-        <li><strong>Ph.D. in Computer Science</strong>, University of North Dakota (Expected 2026)</li>
-        <li><strong>M.Sc. in CSE</strong>, University of Dhaka</li>
-        <li><strong>B.Sc. in CSE</strong>, RUET</li>
-      </ul>
-    </section>
+    <div class="bg-blue-50 border-l-4 border-blue-600 p-4 shadow-sm rounded-md">
+      <div class="flex justify-between items-center">
+        <span class="text-blue-700 font-semibold">Oct 2024</span>
+        <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded">Conference</span>
+      </div>
+      <p class="mt-1 text-sm text-gray-800">Abstract selected at ISV Annual Congress 2024 on LLMs in vaccine discovery</p>
+    </div>
 
-    <!-- === Publications === -->
-    <section class="tab-content" id="publications">
-      <h2 class="text-2xl font-bold mb-4">Publications</h2>
-      <ul class="list-disc pl-5 text-sm space-y-2">
-        <li>Evaluating GPT and BERT models for protein–protein interaction identification — <em>Bioinformatics Advances</em>, 2024</li>
-      </ul>
-    </section>
+    
+    <div class="bg-blue-50 border-l-4 border-blue-600 p-4 shadow-sm rounded-md">
+      <div class="flex justify-between items-center">
+        <span class="text-blue-700 font-semibold">Sep 2024</span>
+        <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded">Publication</span>
+      </div>
+      <p class="mt-1 text-sm text-gray-800">First-author paper published in <em>Bioinformatics Advances</em> on Protein-protein interaction identification using LLM</p>
+    </div>
+  </div> 
+</section>
 
-    <!-- === Repositories === -->
-    <section id="repos" class="tab-content">
-      <h2 class="text-2xl font-bold mb-4">LLM Research Repositories</h2>
-      <ul class="space-y-3">
-        <li class="bg-gray-100 p-4 rounded-lg shadow hover:shadow-md transition">
-          <h3 class="font-semibold text-lg">PPI-GPT-BERT</h3>
-          <p class="text-sm">Transformer-based protein–protein interaction extraction pipeline.</p>
-          <a href="https://github.com/hurlab/PPI-GPT-BERT" class="text-blue-700 underline">View Repository</a>
+
+
+
+  
+<section class="tab-content" id="research">
+<h2 class="text-2xl font-bold mb-4">Research Interests</h2>
+<ul class="list-disc pl-5 space-y-1"><li>Biomedical NLP (BioNLP)</li><li>Biomedical relation extraction</li><li>Multimodal learning</li><li>GPT-based extraction pipelines</li><li>LLMs in cancer vaccine discovery</li><li>Transformers in medical text mining</li></ul>
+</section>
+<section class="tab-content" id="education">
+<h2 class="text-2xl font-bold mb-4">Education</h2>
+<ul class="list-disc pl-5 space-y-2">
+<li><strong>Ph.D. in Computer Science (University of North Dakota, United States)</strong><br/>
+          GPA: 4.00 (Expected - Fall 2026) | Research Area: BioNLP, LLMs, Multimodal AI<br/>
+          Advisor: Junguk Hur, Ph.D.
         </li>
-      </ul>
-    </section>
+<li><strong>M.Sc. in CSE (University of Dhaka, Bangladesh)</strong><br/>
+          CGPA: 3.73 | Thesis: Plant Leaf Disease Detection using Improved Faster RCNN
+        </li>
+<li><strong>B.Sc. in CSE (Rajshahi University of Engineering and Technology, Bangladesh)</strong><br/>
+          CGPA: 3.63 | Thesis: Spatial-spectral CNN for Hyperspectral Image Classification
+        </li>
+</ul>
+</section>
 
-    <!-- === Contact === -->
-    <section class="tab-content" id="contact">
-      <h2 class="text-2xl font-bold mb-4">Contact &amp; CV</h2>
-      <p>Email: <a class="text-blue-700 underline" href="mailto:hasin.rehana@und.edu">hasin.rehana@und.edu</a></p>
-      <p><a class="text-blue-700 underline" href="HasinRehana_CV.pdf" download>Download CV (PDF)</a></p>
-    </section>
-  </main>
+<section class="tab-content" id="publications">
+  <h2 class="text-2xl font-bold mb-4">Publications</h2
+    <ul class="list-disc pl-5 text-sm space-y-2">
+    <li>Evaluating GPT and BERT models for protein–protein interaction identification in biomedical text — Bioinformatics Advances, 2024 <a class="text-blue-700 underline" href="https://doi.org/10.1093/bioadv/vbae133">(DOI)</a></li>
+    <li>Nested named entity recognition using multilayer BERT-based model — CLEF, 2024 <a class="text-blue-700 underline" href="https://ceur-ws.org/Vol-3740/paper-18.pdf">(PDF)</a></li>
+    <li>Adverse childhood experiences and chronic health outcomes: evidence from 33 US states in the Behavioral Risk Factor Surveillance System, 2019–2023 — BMC Public Health, 2025 <a class="text-blue-700 underline" href="https://doi.org/10.1186/s12889-025-22785-2">(DOI)</a></li>
+    <li>A bioinformatics approach for identification of the core ontologies and signature genes of pulmonary disease and associated disease — Gene Reports, 2021 <a class="text-blue-700 underline" href="https://doi.org/10.1016/j.genrep.2021.101206">(DOI)</a></li>
+    <li>Machine learning to reveal an astute risk predictive framework for Gynecologic Cancer and its impact on women psychology: Bangladeshi perspective — BMC Bioinformatics, 2021 <a class="text-blue-700 underline" href="https://doi.org/10.1186/s12859-021-04131-6">(DOI)</a></li>
+    <li>Protein interaction network and drug design of stomach cancer and associated disease: a bioinformatics approach — Journal of Proteins and Proteomics, 2021 <a class="text-blue-700 underline" href="https://doi.org/10.1007/s42485-020-00054-7">(DOI)</a></li>
+    <li>3D-2D BCNN based Automated Feature Extraction & Classification for Hyperspectral Imaging — ICIEV & icIVPR, 2021 <a class="text-blue-700 underline" href="https://doi.org/10.1109/ICIEVicIVPR52578.2021.9563967">(DOI)</a></li>
+    <li>Bangla handwritten digit classification and recognition using SVM algorithm with HOG features — EICT, 2017 <a class="text-blue-700 underline" href="https://doi.org/10.1109/EICT.2017.8275203">(DOI)</a></li>
+  </ul>
 
-  <!-- ===== JavaScript ===== -->
-  <script>
-    // Tab Switching
+  <p class="mt-4 font-semibold">Under Review:</p>
+  <ul class="list-disc pl-5 text-sm space-y-2">
+    <li>Leveraging large language models for cancer vaccine adjuvant name extraction from biomedical literature — Submitted to the AMIA Annual Symposium 2025</li>
+  </ul>
+
+  <p class="mt-4 font-semibold">Preprints:</p>
+  <ul class="list-disc pl-5 text-sm space-y-2">
+    <li>Cancer vaccine adjuvant name recognition from biomedical literature using large language models <a class="text-blue-700 underline" href="https://doi.org/10.48550/arXiv.2502.09659">(arXiv)</a></li>
+    <li>Ontology-based protein–protein interaction explanation using large language models <a class="text-blue-700 underline" href="https://doi.org/10.1101/2025.04.07.647599">(bioRxiv)</a></li>
+    <li>Plant disease detection using region-based convolutional neural network <a class="text-blue-700 underline" href="https://doi.org/10.48550/arXiv.2303.09063">(arXiv)</a></li>
+  </ul>
+</section>
+
+<section id="repos" class="tab-content">
+  <h2 class="text-2xl font-bold mb-4">LLM Research Repositories</h2>
+  <ul class="space-y-4">
+    <li class="bg-gray-100 p-4 rounded-xl shadow hover:shadow-lg transition">
+      <h3 class="font-semibold text-lg">PPI-GPT-BERT</h3>
+      <p class="text-sm">Transformer-based protein–protein interaction extraction pipeline (Bioinformatics Advances 2024).</p>
+      <a href="https://github.com/hurlab/PPI-GPT-BERT" class="text-blue-700 underline">View Repository</a>
+    </li>
+    <li class="bg-gray-100 p-4 rounded-xl shadow hover:shadow-lg transition">
+      <h3 class="font-semibold text-lg">Nested-NER-BERT</h3>
+      <p class="text-sm">Nested biomedical named entity recognition using multilayer BERT (CLEF 2024).</p>
+      <a href="https://github.com/hurlab/Nested-NER-BERT" class="text-blue-700 underline">View Repository</a>
+    </li>
+    <li class="bg-gray-100 p-4 rounded-xl shadow hover:shadow-lg transition">
+      <h3 class="font-semibold text-lg">Vaccine-Adjuvant-LLM</h3>
+      <p class="text-sm">Cancer vaccine adjuvant name recognition from biomedical literature using LLMs (arXiv 2024).</p>
+      <a href="https://github.com/hurlab/Vaccine-Adjuvant-LLM" class="text-blue-700 underline">View Repository</a>
+    </li>
+    <li class="bg-gray-100 p-4 rounded-xl shadow hover:shadow-lg transition">
+      <h3 class="font-semibold text-lg">ArchEHR-QA</h3>
+      <p class="text-sm">LLM-based question answering framework for EHR data. Focus on architecture-informed retrieval.</p>
+      <a href="https://github.com/hurlab/ArchEHR-QA" class="text-blue-700 underline">View Repository</a>
+    </li>
+  </ul>
+</section>
+
+<section class="tab-content" id="talks">
+  <h2 class="text-2xl font-bold mb-4">Talks &amp; Posters</h2>
+  <ul class="list-disc pl-5 text-sm space-y-2">
+    <li>Identifying cancer vaccine adjuvants in biomedical literature using large language models — 17th Great Lakes Bioinformatics Conference, 2025 (Talk)</li>
+    <li>Leveraging large language models to identify vaccine adjuvants from biomedical literature — Frank Low Research Day, University of North Dakota (UND), 2025 (Poster)</li>
+    <li>Recognition of biomedical nested named entities using a multilayer BERT-based model — Graduate Research Achievement Day (GRAD), UND, 2025 (Poster)</li>
+    <li>Recognizing cancer vaccine adjuvant names from clinical trial data with large language models — North Dakota EPSCoR State Conference, 2024 (Poster)</li>
+    <li>Cancer vaccine adjuvant name recognition from clinical trial data using large language models — International Society for Vaccines Annual Congress, 2024 (Poster)</li>
+    <li>Cancer vaccine adjuvant name recognition from clinical trial data using large language models — Vaccine and Drug Ontology Studies (VDOS) Workshop, 13th International Conference on Biological and Biomedical Ontology (ICBO), 2024 (Talk | Virtual)</li>
+    <li>Identifying drug-drug interactions from biomedical texts using large language models — Frank Low Research Day, UND, 2024 (Poster)</li>
+    <li>Identifying drug-drug interactions from biomedical texts using large language models — NPBS 2024 (Poster)</li>
+    <li>Extracting protein–protein interactions from biomedical literature using large language models — GRAD, UND, 2024 (Poster)</li>
+    <li>Leveraging large language models for extracting protein–protein interactions from biomedical corpora — South Dakota State University Data Science Symposium 2024 (Poster)</li>
+    <li>Evaluation of GPT-3 on identifying protein–protein interactions from biomedical text — GRAD, UND, 2023 (Poster)</li>
+    <li>ChatGPT to identify drug-drug interactions from biomedical texts — VDOS Workshop, ICBO, 2023 (Talk | Virtual)</li>
+    <li>Identifying protein–protein interaction from biomedical text using generative pre-trained transformer — CARS, UND, 2023 (Poster)</li>
+  </ul>
+</section>
+
+<section class="tab-content" id="experience">
+<h2 class="text-2xl font-bold mb-4">Experience</h2>
+<ul class="list-disc pl-5">
+<li>Graduate Research Assistant – University of North Dakota (2023–Present)</li>
+<li>Lecturer – Daffodil International University (On leave), Bangladesh</li>
+<li>Convener – Girls' Computer Programming Club, Daffodil International University</li>
+</ul>
+</section>
+
+
+
+<section class="tab-content" id="skills">
+  <h2 class="text-2xl font-extrabold mb-10 text-gray-800 flex items-center space-x-3">
+    <span>Technical Skills</span>
+  </h2>
+  <div class="grid grid-cols-2 sm:grid-cols-4 gap-10">
+    <div class="flex flex-col items-center space-y-2">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" class="w-14 h-14" alt="Python"/>
+      <span class="text-sm font-medium">Python</span>
+    </div>
+    <div class="flex flex-col items-center space-y-2">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" class="w-14 h-14" alt="Java"/>
+      <span class="text-sm font-medium">Java</span>
+    </div>
+    <div class="flex flex-col items-center space-y-2">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" class="w-14 h-14" alt="C++"/>
+      <span class="text-sm font-medium">C++</span>
+    </div>
+    <div class="flex flex-col items-center space-y-2">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pytorch/pytorch-original.svg" class="w-14 h-14" alt="PyTorch"/>
+      <span class="text-sm font-medium">PyTorch</span>
+    </div>
+    <div class="flex flex-col items-center space-y-2">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg" class="w-14 h-14" alt="TensorFlow"/>
+      <span class="text-sm font-medium">TensorFlow</span>
+    </div>
+    <div class="flex flex-col items-center space-y-2">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/scikitlearn/scikitlearn-original.svg" class="w-14 h-14" alt="Scikit-learn"/>
+      <span class="text-sm font-medium">Scikit-learn</span>
+    </div>
+    <div class="flex flex-col items-center space-y-2">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" class="w-14 h-14" alt="Git"/>
+      <span class="text-sm font-medium">Git</span>
+    </div>
+    <div class="flex flex-col items-center space-y-2">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" class="w-14 h-14" alt="GitHub"/>
+      <span class="text-sm font-medium">GitHub</span>
+    </div>
+    <div class="flex flex-col items-center space-y-2">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg" class="w-14 h-14" alt="Firebase"/>
+      <span class="text-sm font-medium">Firebase</span>
+    </div>
+    <div class="flex flex-col items-center space-y-2">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/opencv/opencv-original.svg" class="w-14 h-14" alt="OpenCV"/>
+      <span class="text-sm font-medium">OpenCV</span>
+    </div>
+    <div class="flex flex-col items-center space-y-2">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/2/21/Matlab_Logo.png" class="w-14 h-14" alt="MATLAB"/>
+      <span class="text-sm font-medium">MATLAB</span>
+    </div>
+
+
+    <div class="flex flex-col items-center space-y-2">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" class="w-14 h-14" alt="Linux"/>
+      <span class="text-sm font-medium">Linux</span>
+    </div>
+  </div>
+</section>
+
+
+<section class="tab-content" id="awards">
+<h2 class="text-2xl font-bold mb-4">Awards &amp; Fellowships</h2>
+<ul class="list-disc pl-5 space-y-2">
+<li>Travel Award – Data Science Symposium, South Dakota State University, 2024</li>
+<li>Best Poster – Cyber Awareness and Research Symposium (CARS), University of North Dakota, 2023</li>
+<li>Information and Communication Technology Masters Fellowship – Government of Bangladesh</li>
+<li>Google Study Jam, Hackathons, Android Study Jam</li>
+</ul>
+</section>
+<section class="tab-content" id="contact">
+<h2 class="text-2xl font-bold mb-4">Contact &amp; CV</h2>
+<p>Email: <a class="text-blue-700 underline" href="mailto:hasin.rehana@und.edu">hasin.rehana@und.edu</a></p>
+<p><a class="text-blue-700 underline" download="" href="HasinRehana_CV.pdf">Download Full CV (PDF)</a></p>
+</section>
+</main>
+
+    
+   <script>
     function showTab(event, tabId) {
       document.querySelectorAll('.tab-content').forEach(tab => tab.classList.remove('active'));
       document.getElementById(tabId).classList.add('active');
       document.querySelectorAll('.sidebar-link').forEach(link => link.classList.remove('bg-blue-700'));
       event.target.classList.add('bg-blue-700');
-
-      // Close sidebar on mobile after selecting
-      if (window.innerWidth < 768) {
-        sidebar.classList.add('-translate-x-full');
-      }
     }
-
-    // Mobile Sidebar Toggle
-    const menuBtn = document.getElementById('menu-btn');
-    const sidebar = document.getElementById('sidebar');
-    menuBtn.addEventListener('click', () => {
-      sidebar.classList.toggle('-translate-x-full');
-    });
   </script>
 </body>
 </html>
