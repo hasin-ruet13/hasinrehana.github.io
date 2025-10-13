@@ -8,11 +8,10 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
-  <!-- If CSS fails, prevent mobile menu from showing -->
+  <!-- Safety: hide mobile menu if CSS doesn’t load -->
   <style>#hrMobileMenu{display:none}</style>
 
-  <!-- Cache-busted CSS -->
-  <link rel="stylesheet" href="assets/css/style.css?v=4.3" />
+  <link rel="stylesheet" href="assets/css/style.css?v=5.0" />
 </head>
 <body>
   <!-- Header -->
@@ -73,11 +72,10 @@
           <a class="hr-sbtn" href="mailto:hasin.rehana@und.edu" title="Email">
             <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M20 4H4a2 2 0 00-2 2v12a2 2 0 002 2h16a2 2 0 002-2V6a2 2 0 00-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
           </a>
-          <!-- Google Scholar -->
+          <!-- Google Scholar (cap + G icon) -->
           <a class="hr-sbtn" href="https://scholar.google.com/citations?user=q6tQJu0AAAAJ&hl=en&authuser=4" target="_blank" rel="noopener" title="Google Scholar">
             <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
-              <path d="M12 3l9 5-9 5-9-5 9-5zm-6 9l6 3 6-3v3l-6 3-6-3v-3z"/>
-              <path d="M7 19h10v2H7z"/>
+              <path d="M12 2l9 5-9 5-9-5 9-5zM6 14h12v2H6zM8 18h8v2H8z" />
             </svg>
           </a>
           <!-- GitHub -->
@@ -139,42 +137,57 @@
       <h2 class="h-title">Publications</h2>
       <p class="muted-line">Visit <a href="https://scholar.google.com/citations?user=q6tQJu0AAAAJ&hl=en&authuser=4" target="_blank" rel="noopener">Google Scholar</a> for a full list.</p>
       <ol class="pubs">
-        <li>H. Rehana, J. Zheng, F.-Y. Yeh, B. Bansal, N.B. Çam, C. Jemiyo, B. McGregor, A. Özgür, Y. He, J. Hur (2025).
+        <li>
+          H. Rehana, J. Zheng, F.-Y. Yeh, B. Bansal, N.B. Çam, C. Jemiyo, B. McGregor, A. Özgür, Y. He, J. Hur (2025).
           <strong>Leveraging large language models for cancer vaccine adjuvant name extraction from biomedical literature</strong>.
-          <em>Proceedings of the AMIA Annual Symposium 2025</em> (Accepted). Atlanta, GA, Nov 15–19, 2025.</li>
+          <em>Proceedings of the AMIA Annual Symposium 2025</em> (Accepted). Atlanta, GA, Nov 15–19, 2025>.
+        </li>
 
-        <li>H. Rehana, N.B. Çam, M. Basmaci, J. Zheng, C. Jemiyo, Y. He, A. Özgür, J. Hur (2024).
+        <li>
+          H. Rehana, N.B. Çam, M. Basmaci, J. Zheng, C. Jemiyo, Y. He, A. Özgür, J. Hur (2024).
           <strong>Evaluating GPT and BERT models for protein–protein interaction identification in biomedical text</strong>.
           <em>Bioinformatics Advances</em>, 4(1), vbae133.
-          <a class="ext" href="https://doi.org/10.1093/bioadv/vbae133" target="_blank" rel="noopener">DOI</a></li>
+          <a class="pill" href="https://doi.org/10.1093/bioadv/vbae133" target="_blank" rel="noopener">DOI</a>
+        </li>
 
-        <li>H. Rehana, B. Bansal, N.B. Çam, J. Zheng, Y. He, A. Özgür, J. Hur (2024).
+        <li>
+          H. Rehana, B. Bansal, N.B. Çam, J. Zheng, Y. He, A. Özgür, J. Hur (2024).
           <strong>Nested named entity recognition using a multilayer BERT-based model</strong>. CLEF Working Notes.
-          <a class="ext" href="https://ceur-ws.org/Vol-3740/paper-18.pdf" target="_blank" rel="noopener">PDF</a></li>
+          <a class="pill" href="https://ceur-ws.org/Vol-3740/paper-18.pdf" target="_blank" rel="noopener">PDF</a>
+        </li>
 
         <li>C. Jemiyo, B.A. McGregor, H. Rehana, J. Hur (2025).
           <strong>Adverse childhood experiences and chronic health outcomes …</strong> <em>BMC Public Health</em>, 25(1), 1650.
-          <a class="ext" href="https://doi.org/10.1186/s12889-025-22785-2" target="_blank" rel="noopener">DOI</a></li>
+          <a class="pill" href="https://doi.org/10.1186/s12889-025-22785-2" target="_blank" rel="noopener">DOI</a>
+        </li>
 
-        <li>H. Rehana et al. (2021). <strong>A bioinformatics approach for identification of the core ontologies and signature genes of pulmonary disease …</strong>
+        <li>H. Rehana et al. (2021).
+          <strong>A bioinformatics approach for identification of the core ontologies and signature genes of pulmonary disease …</strong>
           <em>Gene Reports</em>.
-          <a class="ext" href="https://doi.org/10.1016/j.genrep.2021.101206" target="_blank" rel="noopener">DOI</a></li>
+          <a class="pill" href="https://doi.org/10.1016/j.genrep.2021.101206" target="_blank" rel="noopener">DOI</a>
+        </li>
 
-        <li>S. Asaduzzaman et al. (2021). <strong>Machine learning to reveal an astute risk predictive framework for Gynecologic Cancer …</strong>
+        <li>S. Asaduzzaman et al. (2021).
+          <strong>Machine learning to reveal an astute risk predictive framework for Gynecologic Cancer …</strong>
           <em>BMC Bioinformatics</em>.
-          <a class="ext" href="https://doi.org/10.1186/s12859-021-04131-6" target="_blank" rel="noopener">DOI</a></li>
+          <a class="pill" href="https://doi.org/10.1186/s12859-021-04131-6" target="_blank" rel="noopener">DOI</a>
+        </li>
 
-        <li>Md. R. Ahmed, H. Rehana, S. Asaduzzaman (2021). <strong>Protein interaction network and drug design of stomach cancer …</strong>
+        <li>Md. R. Ahmed, H. Rehana, S. Asaduzzaman (2021).
+          <strong>Protein interaction network and drug design of stomach cancer …</strong>
           <em>Journal of Proteins and Proteomics</em>.
-          <a class="ext" href="https://doi.org/10.1007/s42485-020-00054-7" target="_blank" rel="noopener">DOI</a></li>
+          <a class="pill" href="https://doi.org/10.1007/s42485-020-00054-7" target="_blank" rel="noopener">DOI</a>
+        </li>
 
         <li>H. Rehana, S. Asaduzzaman, R. Chakma (2021).
           <strong>3D–2D BCNN … for Hyperspectral Imaging</strong>. ICIEV & icIVPR.
-          <a class="ext" href="https://doi.org/10.1109/ICIEVicIVPR52578.2021.9563967" target="_blank" rel="noopener">DOI</a></li>
+          <a class="pill" href="https://doi.org/10.1109/ICIEVicIVPR52578.2021.9563967" target="_blank" rel="noopener">DOI</a>
+        </li>
 
         <li>H. Rehana (2017).
           <strong>Bangla handwritten digit classification and recognition using SVM …</strong> EICT.
-          <a class="ext" href="https://doi.org/10.1109/EICT.2017.8275203" target="_blank" rel="noopener">DOI</a></li>
+          <a class="pill" href="https://doi.org/10.1109/EICT.2017.8275203" target="_blank" rel="noopener">DOI</a>
+        </li>
       </ol>
 
       <div class="subgroup">
@@ -187,84 +200,70 @@
         <ul>
           <li>J. Zheng, A.Y. Lin, A. Huffman, <em>…</em>, H. Rehana, <em>…</em>, Y. He, et al. (2025).
             <strong>VO: The Vaccine Ontology</strong>. bioRxiv.
-            <a class="ext" href="https://doi.org/10.1101/2025.08.12.669998" target="_blank" rel="noopener">DOI</a></li>
-          <li>N.B. Çam, H. Rehana, J. Zheng, <em>…</em> (2025). <strong>Ontology-based protein–protein interaction explanation using LLMs</strong>.
-            bioRxiv. <a class="ext" href="https://doi.org/10.1101/2025.04.07.647599" target="_blank" rel="noopener">DOI</a></li>
-          <li>H. Rehana, M. Ibrahim, H. Ali (2023). <strong>Plant disease detection using region-based CNN</strong>. arXiv.
-            <a class="ext" href="https://doi.org/10.48550/arXiv.2303.09063" target="_blank" rel="noopener">arXiv</a></li>
+            <a class="pill" href="https://doi.org/10.1101/2025.08.12.669998" target="_blank" rel="noopener">DOI</a></li>
+          <li>N.B. Çam, H. Rehana, J. Zheng, <em>…</em> (2025).
+            <strong>Ontology-based protein–protein interaction explanation using LLMs</strong>.
+            <a class="pill" href="https://doi.org/10.1101/2025.04.07.647599" target="_blank" rel="noopener">bioRxiv</a></li>
+          <li>H. Rehana, M. Ibrahim, H. Ali (2023).
+            <strong>Plant disease detection using region-based CNN</strong>.
+            <a class="pill" href="https://doi.org/10.48550/arXiv.2303.09063" target="_blank" rel="noopener">arXiv</a></li>
         </ul>
       </div>
     </section>
 
-  <section id="experience" class="hr-section hr-container exp">
-  <div class="exp-grid">
-    <div class="exp-title">
-      <h2 class="h-title">Work<br/>Experience</h2>
-    </div>
-
-    <div class="exp-timeline">
-      <!-- rail -->
-      <div class="exp-rail" aria-hidden="true"></div>
-
-      <!-- Sanford -->
-      <article class="exp-item" id="exp-sanford">
-        <div class="exp-dot" aria-hidden="true"></div>
-        <div class="exp-card">
-          <div class="exp-role">Clinical Research Study Team Member</div>
-          <div class="exp-place">
-            <a href="https://research.sanfordhealth.org/" target="_blank" rel="noopener">Sanford Research</a>
-          </div>
-          <div class="exp-meta">Jun 2025 – Present · Fargo, ND, USA</div>
-          <p class="exp-desc">Multimodal AI for TAVR risk prediction (clinical imaging + EHR).</p>
+    <!-- EXPERIENCE (timeline cards) -->
+    <section id="experience" class="hr-section hr-container exp">
+      <div class="exp-grid">
+        <div class="exp-title">
+          <h2 class="h-title">Work<br/>Experience</h2>
         </div>
-      </article>
 
-      <!-- UND -->
-      <article class="exp-item" id="exp-und">
-        <div class="exp-dot" aria-hidden="true"></div>
-        <div class="exp-card">
-          <div class="exp-role">Graduate Research Assistant</div>
-          <div class="exp-place">
-            <a href="https://und.edu/" target="_blank" rel="noopener">University of North Dakota</a>
-          </div>
-          <div class="exp-meta">Jan 2023 – Present · Grand Forks, ND, USA</div>
-          <p class="exp-desc">Biomedical NLP & LLMs for relation extraction and vaccine informatics (Hur Lab).</p>
+        <div class="exp-timeline">
+          <div class="exp-rail" aria-hidden="true"></div>
+
+          <article class="exp-item" id="exp-sanford">
+            <div class="exp-dot" aria-hidden="true"></div>
+            <div class="exp-card">
+              <div class="exp-role">Clinical Research Study Team Member</div>
+              <div class="exp-place"><a href="https://research.sanfordhealth.org/" target="_blank" rel="noopener">Sanford Research</a></div>
+              <div class="exp-meta">Jun 2025 – Present · Fargo, ND, USA</div>
+              <p class="exp-desc">Multimodal AI for TAVR risk prediction (clinical imaging + EHR).</p>
+            </div>
+          </article>
+
+          <article class="exp-item" id="exp-und">
+            <div class="exp-dot" aria-hidden="true"></div>
+            <div class="exp-card">
+              <div class="exp-role">Graduate Research Assistant</div>
+              <div class="exp-place"><a href="https://und.edu/" target="_blank" rel="noopener">University of North Dakota</a></div>
+              <div class="exp-meta">Jan 2023 – Present · Grand Forks, ND, USA</div>
+              <p class="exp-desc">Biomedical NLP & LLMs for relation extraction and vaccine informatics (Hur Lab).</p>
+            </div>
+          </article>
+
+          <article class="exp-item" id="exp-diu">
+            <div class="exp-dot" aria-hidden="true"></div>
+            <div class="exp-card">
+              <div class="exp-role">Lecturer (on study leave)</div>
+              <div class="exp-place"><a href="https://daffodilvarsity.edu.bd/" target="_blank" rel="noopener">Daffodil International University</a>, Bangladesh</div>
+              <div class="exp-meta">Jan 2019 – Present · Dhaka, Bangladesh</div>
+            </div>
+          </article>
+
+          <article class="exp-item" id="exp-gcpc">
+            <div class="exp-dot" aria-hidden="true"></div>
+            <div class="exp-card">
+              <div class="exp-role">Convener</div>
+              <div class="exp-place">
+                <a href="https://gcpc.daffodilvarsity.edu.bd/" target="_blank" rel="noopener">Girls' Computer Programming Club (GCPC)</a> — 
+                <a href="https://daffodilvarsity.edu.bd/" target="_blank" rel="noopener">Daffodil International University</a>, Bangladesh
+              </div>
+              <div class="exp-meta">Jan 2020 – Dec 2021 · Dhaka, Bangladesh</div>
+            </div>
+          </article>
         </div>
-      </article>
-
-      <!-- DIU Lecturer -->
-      <article class="exp-item" id="exp-diu">
-        <div class="exp-dot" aria-hidden="true"></div>
-        <div class="exp-card">
-          <div class="exp-role">Lecturer (on study leave)</div>
-          <div class="exp-place">
-            <a href="https://daffodilvarsity.edu.bd/" target="_blank" rel="noopener">Daffodil International University</a>, Bangladesh
-          </div>
-          <div class="exp-meta">Jan 2019 – Present</div>
-        </div>
-      </article>
-
-      <!-- GCPC Convener (DIU, Bangladesh) -->
-<article class="exp-item" id="exp-gcpc">
-  <div class="exp-dot" aria-hidden="true"></div>
-  <div class="exp-card">
-    <div class="exp-role">Convener</div>
-    <div class="exp-place">
-      <a href="https://gcpc.daffodilvarsity.edu.bd/" target="_blank" rel="noopener">
-        Girls' Computer Programming Club (GCPC)
-      </a> — 
-      <a href="https://daffodilvarsity.edu.bd/" target="_blank" rel="noopener">
-        Daffodil International University
-      </a>, Bangladesh
-    </div>
-    <div class="exp-meta">Jan 2020 – Dec 2021 · Dhaka, Bangladesh</div>
-  </div>
-</article>
-
-    </div>
-  </div>
-</section>
-
+      </div>
+    </section>
 
     <!-- AWARDS -->
     <section id="awards" class="hr-section hr-container">
@@ -317,7 +316,7 @@
     </footer>
   </main>
 
-  <!-- Full-screen search (Anish style) -->
+  <!-- Full-screen search -->
   <div id="aniSearch" class="ani-search" aria-hidden="true" role="dialog" aria-label="Site search">
     <button id="aniClose" class="ani-x" title="Close" aria-label="Close search">✕</button>
     <div class="ani-wrap">
@@ -332,169 +331,117 @@
   </div>
 
   <script>
-    // ===== Theme toggle =====
-    const hrThemeBtn = document.getElementById('hrTheme');
-    const hrStored = localStorage.getItem('theme');
-    if (hrStored === 'dark') document.documentElement.classList.add('dark');
-    hrThemeBtn.addEventListener('click', () => {
+    // Theme
+    const hrThemeBtn=document.getElementById('hrTheme');
+    const hrStored=localStorage.getItem('theme');
+    if(hrStored==='dark') document.documentElement.classList.add('dark');
+    hrThemeBtn.addEventListener('click',()=>{
       document.documentElement.classList.toggle('dark');
-      localStorage.setItem('theme',
-        document.documentElement.classList.contains('dark') ? 'dark' : 'light');
+      localStorage.setItem('theme',document.documentElement.classList.contains('dark')?'dark':'light');
     });
 
-    // ===== Mobile menu =====
-    const hrBurger = document.getElementById('hrBurger');
-    const hrMenu = document.getElementById('hrMobileMenu');
-    hrBurger.addEventListener('click', () => {
-      const open = hrMenu.classList.toggle('open');
-      hrBurger.setAttribute('aria-expanded', open ? 'true' : 'false');
+    // Mobile menu
+    const hrBurger=document.getElementById('hrBurger');
+    const hrMenu=document.getElementById('hrMobileMenu');
+    hrBurger.addEventListener('click',()=>{
+      const open=hrMenu.classList.toggle('open');
+      hrBurger.setAttribute('aria-expanded',open?'true':'false');
     });
-    hrMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
-      hrMenu.classList.remove('open'); hrBurger.setAttribute('aria-expanded','false');
-    }));
+    hrMenu.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{hrMenu.classList.remove('open');hrBurger.setAttribute('aria-expanded','false');}));
 
-    // ===== Header shadow + active link =====
-    const hrHeader = document.querySelector('.hr-header');
-    addEventListener('scroll', () => hrHeader.classList.toggle('scrolled', scrollY > 2));
-
-    const hrHeaderH = 72;
-    const hrLinks = [...document.querySelectorAll('.hr-navlink')];
-    document.querySelectorAll('a[href^="#"]').forEach(a => {
-      a.addEventListener('click', (e) => {
-        const id = a.getAttribute('href').slice(1);
-        const el = document.getElementById(id);
-        if (!el) return;
-        e.preventDefault();
-        const y = el.getBoundingClientRect().top + window.scrollY - hrHeaderH;
-        window.scrollTo({ top: y, behavior: 'smooth' });
+    // Header shadow + active link
+    const hrHeader=document.querySelector('.hr-header');
+    addEventListener('scroll',()=>hrHeader.classList.toggle('scrolled',scrollY>2));
+    const hrHeaderH=72;
+    const hrLinks=[...document.querySelectorAll('.hr-navlink')];
+    document.querySelectorAll('a[href^="#"]').forEach(a=>{
+      a.addEventListener('click',(e)=>{
+        const id=a.getAttribute('href').slice(1); const el=document.getElementById(id);
+        if(!el) return; e.preventDefault();
+        const y=el.getBoundingClientRect().top+window.scrollY-hrHeaderH;
+        window.scrollTo({top:y,behavior:'smooth'});
       });
     });
-    const hrSections = [...document.querySelectorAll('section[id]')];
-    const hrIO = new IntersectionObserver((entries) => {
-      entries.forEach(ent => {
-        if (ent.isIntersecting) {
-          const id = ent.target.id;
-          hrLinks.forEach(l => l.classList.toggle('active', l.getAttribute('href') === `#${id}`));
+    const hrSections=[...document.querySelectorAll('section[id]')];
+    const hrIO=new IntersectionObserver((entries)=>{
+      entries.forEach(ent=>{
+        if(ent.isIntersecting){
+          const id=ent.target.id;
+          hrLinks.forEach(l=>l.classList.toggle('active',l.getAttribute('href')===`#${id}`));
         }
       });
-    }, { rootMargin: '-45% 0px -50% 0px', threshold: 0.01 });
-    hrSections.forEach(s => hrIO.observe(s));
+    },{rootMargin:'-45% 0px -50% 0px',threshold:0.01});
+    hrSections.forEach(s=>hrIO.observe(s));
 
-    // ===== Build search index =====
-    const hrIndex = [];
-    function hrAdd(el, label, href){
-      const text = el.textContent.replace(/\s+/g,' ').trim();
-      if (text.length < 2) return;
-      hrIndex.push({ text, label, href });
+    // Build search index
+    const hrIndex=[];
+    function hrAdd(el,label,href){
+      const text=el.textContent.replace(/\s+/g,' ').trim(); if(text.length<2) return;
+      hrIndex.push({text,label,href});
     }
     document.querySelectorAll('section[id] .h-title').forEach(h=>{
-      const sec = h.closest('section[id]');
-      hrAdd(h, 'Section', `#${sec.id}`);
+      const sec=h.closest('section[id]'); hrAdd(h,'Section',`#${sec.id}`);
     });
-    document.querySelectorAll('#news li, #publications li, #experience li, #awards li, #talks li, #service li').forEach((li,i)=>{
-      if (!li.id) li.id = 'it-' + i + '-' + Math.random().toString(36).slice(2,7);
-      const sec = li.closest('section[id]').id;
-      hrAdd(li, sec.charAt(0).toUpperCase()+sec.slice(1), `#${li.id}`);
+    document.querySelectorAll('#news li, #publications li, #experience .exp-role, #awards li, #talks li, #service li').forEach((node,i)=>{
+      let el=node; if(node.classList.contains('exp-role')) el=node.closest('.exp-item');
+      if(!el.id) el.id='it-'+i+'-'+Math.random().toString(36).slice(2,7);
+      const sec=el.closest('section[id]').id;
+      hrAdd(el, sec.charAt(0).toUpperCase()+sec.slice(1), `#${el.id}`);
     });
 
     function hrSearch(q){
-      const s = q.toLowerCase().trim();
-      if (!s) return [];
-      const hits = [];
-      for (const row of hrIndex){
-        const p = row.text.toLowerCase().indexOf(s);
-        if (p !== -1) hits.push({ row, p, score: p + row.text.length*0.001 });
+      const s=q.toLowerCase().trim(); if(!s) return [];
+      const hits=[]; for(const row of hrIndex){
+        const p=row.text.toLowerCase().indexOf(s);
+        if(p!==-1) hits.push({row,p,score:p+row.text.length*0.001});
       }
-      hits.sort((a,b)=>a.score - b.score);
+      hits.sort((a,b)=>a.score-b.score);
       return hits.slice(0,40);
     }
     function hrHL(text,q){
-      const i = text.toLowerCase().indexOf(q.toLowerCase());
-      if (i<0) return text;
+      const i=text.toLowerCase().indexOf(q.toLowerCase());
+      if(i<0) return text;
       return text.slice(0,i)+'<mark>'+text.slice(i,i+q.length)+'</mark>'+text.slice(i+q.length);
     }
 
-    // ===== Full-screen search wiring =====
-    const aniSearch = document.getElementById('aniSearch');
-    const aniOpenBtn = document.getElementById('hrOpenSearch');
-    const aniCloseBtn = document.getElementById('aniClose');
-    const aniField = document.getElementById('aniField');
-    const aniResults = document.getElementById('aniResults');
+    // Full-screen search UI
+    const aniSearch=document.getElementById('aniSearch');
+    const aniOpenBtn=document.getElementById('hrOpenSearch');
+    const aniCloseBtn=document.getElementById('aniClose');
+    const aniField=document.getElementById('aniField');
+    const aniResults=document.getElementById('aniResults');
 
-    function aniOpen(){
-      aniSearch.classList.add('open');
-      aniSearch.setAttribute('aria-hidden','false');
-      aniField.value=''; aniRender([]);
-      setTimeout(()=>aniField.focus(), 30);
-    }
-    function aniClose(){
-      aniSearch.classList.remove('open');
-      aniSearch.setAttribute('aria-hidden','true');
-      aniOpenBtn && aniOpenBtn.focus();
-    }
+    function aniOpen(){ aniSearch.classList.add('open'); aniSearch.setAttribute('aria-hidden','false'); aniField.value=''; aniRender([]); setTimeout(()=>aniField.focus(),30); }
+    function aniClose(){ aniSearch.classList.remove('open'); aniSearch.setAttribute('aria-hidden','true'); aniOpenBtn && aniOpenBtn.focus(); }
     function aniRender(results){
       aniResults.innerHTML='';
-      if (!results.length){
-        const li=document.createElement('li');
-        li.className='empty'; li.textContent=aniField.value?'No matches':'Type to search…';
-        aniResults.appendChild(li); return;
-      }
+      if(!results.length){ const li=document.createElement('li'); li.className='empty'; li.textContent=aniField.value?'No matches':'Type to search…'; aniResults.appendChild(li); return; }
       results.forEach((hit,idx)=>{
-        const li=document.createElement('li');
-        li.className='item'+(idx===0?' active':'');
-        li.setAttribute('data-href', hit.row.href);
-        li.innerHTML=`<div class="lab">${hit.row.label}</div>
-                      <div class="txt">${hrHL(hit.row.text, aniField.value)}</div>`;
+        const li=document.createElement('li'); li.className='item'+(idx===0?' active':''); li.setAttribute('data-href',hit.row.href);
+        li.innerHTML=`<div class="lab">${hit.row.label}</div><div class="txt">${hrHL(hit.row.text,aniField.value)}</div>`;
         aniResults.appendChild(li);
       });
     }
 
-    aniOpenBtn.addEventListener('click', aniOpen);
-    aniCloseBtn.addEventListener('click', aniClose);
-    document.addEventListener('keydown', (e)=>{
-      if (e.key==='/' && !e.metaKey && !e.ctrlKey && !e.altKey){ e.preventDefault(); aniOpen(); }
-      if (e.key==='Escape' && aniSearch.classList.contains('open')){ e.preventDefault(); aniClose(); }
-    });
-
-    aniField.addEventListener('input', ()=> aniRender(hrSearch(aniField.value)));
-
-    aniField.addEventListener('keydown', (e)=>{
-      const items=[...aniResults.querySelectorAll('.item')];
-      if (!items.length) return;
+    aniOpenBtn.addEventListener('click',aniOpen);
+    aniCloseBtn.addEventListener('click',aniClose);
+    document.addEventListener('keydown',(e)=>{ if(e.key==='/' && !e.metaKey && !e.ctrlKey && !e.altKey){e.preventDefault(); aniOpen();} if(e.key==='Escape' && aniSearch.classList.contains('open')){e.preventDefault(); aniClose();} });
+    aniField.addEventListener('input',()=>aniRender(hrSearch(aniField.value)));
+    aniField.addEventListener('keydown',(e)=>{
+      const items=[...aniResults.querySelectorAll('.item')]; if(!items.length) return;
       let idx=items.findIndex(i=>i.classList.contains('active'));
-      if (e.key==='ArrowDown'){ e.preventDefault(); idx=Math.min(items.length-1, idx+1); items.forEach(i=>i.classList.remove('active')); items[idx].classList.add('active'); }
-      if (e.key==='ArrowUp'){ e.preventDefault(); idx=Math.max(0, idx-1); items.forEach(i=>i.classList.remove('active')); items[idx].classList.add('active'); }
-      if (e.key==='Enter'){
-        e.preventDefault();
-        const cur=aniResults.querySelector('.item.active'); if (!cur) return;
-        const href=cur.getAttribute('data-href'); aniClose();
-        if (href.startsWith('#')){
-          const el=document.querySelector(href);
-          if (el){
-            const y=el.getBoundingClientRect().top + window.scrollY - hrHeaderH;
-            window.scrollTo({ top:y, behavior:'smooth' });
-          } else { location.href=href; }
-        } else { window.open(href,'_blank','noopener'); }
+      if(e.key==='ArrowDown'){e.preventDefault(); idx=Math.min(items.length-1,idx+1);}
+      if(e.key==='ArrowUp'){e.preventDefault(); idx=Math.max(0,idx-1);}
+      items.forEach(i=>i.classList.remove('active')); if(items[idx]) items[idx].classList.add('active');
+      if(e.key==='Enter'){e.preventDefault(); const cur=aniResults.querySelector('.item.active'); if(!cur) return; const href=cur.getAttribute('data-href'); aniClose();
+        if(href.startsWith('#')){ const el=document.querySelector(href); if(el){ const y=el.getBoundingClientRect().top+window.scrollY-hrHeaderH; window.scrollTo({top:y,behavior:'smooth'});} else { location.href=href; } }
+        else { window.open(href,'_blank','noopener'); }
       }
     });
-
-    aniResults.addEventListener('mouseover',(e)=>{
-      const li=e.target.closest('.item'); if (!li) return;
-      aniResults.querySelectorAll('.item').forEach(i=>i.classList.remove('active'));
-      li.classList.add('active');
-    });
-    aniResults.addEventListener('click',(e)=>{
-      const li=e.target.closest('.item'); if (!li) return;
-      const href=li.getAttribute('data-href'); aniClose();
-      if (href.startsWith('#')){
-        const el=document.querySelector(href);
-        if (el){
-          const y=el.getBoundingClientRect().top + window.scrollY - hrHeaderH;
-          window.scrollTo({ top:y, behavior:'smooth' });
-        } else { location.href=href; }
-      } else {
-        window.open(href,'_blank','noopener');
-      }
+    aniResults.addEventListener('mouseover',(e)=>{ const li=e.target.closest('.item'); if(!li) return; aniResults.querySelectorAll('.item').forEach(i=>i.classList.remove('active')); li.classList.add('active'); });
+    aniResults.addEventListener('click',(e)=>{ const li=e.target.closest('.item'); if(!li) return; const href=li.getAttribute('data-href'); aniClose();
+      if(href.startsWith('#')){ const el=document.querySelector(href); if(el){ const y=el.getBoundingClientRect().top+window.scrollY-hrHeaderH; window.scrollTo({top:y,behavior:'smooth'});} else { location.href=href; } }
+      else window.open(href,'_blank','noopener');
     });
   </script>
 </body>
