@@ -28,26 +28,27 @@
         <a href="HasinRehana_CV.pdf" class="nav-link" target="_blank" rel="noopener">CV</a>
       </nav>
 
-      <div class="nav-actions">
-        <button id="openSearch" class="icon-btn" title="Search ( / )" aria-label="Search">
-          <!-- loupe -->
-          <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
-            <path d="M15.5 14h-.79l-.28-.27A6.5 6.5 0 109.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 5L20.49 19l-5-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/>
-          </svg>
-        </button>
-        <button id="themeToggle" class="icon-btn" title="Toggle dark mode" aria-label="Toggle theme">
-          <!-- moon -->
-          <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
-            <path d="M21 12.79A9 9 0 1111.21 3a7 7 0 109.79 9.79z"/>
-          </svg>
-        </button>
-        <button id="hamburger" class="icon-btn hide-desktop" aria-label="Menu" aria-expanded="false">
-          <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
-            <path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/>
-          </svg>
-        </button>
-      </div>
+<!-- Full-screen search (Anish-style) -->
+<div id="aniSearch" class="ani-search" aria-hidden="true" role="dialog" aria-label="Site search">
+  <button id="aniClose" class="ani-x" title="Close" aria-label="Close search">
+    ✕
+  </button>
+
+  <div class="ani-wrap">
+    <h1 class="ani-title">Search</h1>
+
+    <div class="ani-input">
+      <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
+        <path d="M15.5 14h-.79l-.28-.27A6.5 6.5 0 109.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 5L20.49 19l-5-5z"/>
+      </svg>
+      <input id="aniField" type="search" placeholder="Search…" autocomplete="off" />
     </div>
+
+    <ul id="aniResults" class="ani-results" role="listbox" aria-label="Search results"></ul>
+    <div class="ani-hint">↑/↓ to navigate • Enter to open • Esc to close</div>
+  </div>
+</div>
+
 
     <!-- Mobile menu -->
     <nav id="mobileMenu" class="mobile-menu" aria-label="Mobile">
