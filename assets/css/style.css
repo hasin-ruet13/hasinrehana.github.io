@@ -77,16 +77,17 @@ a:hover{text-decoration:underline}
 .hr-ibtn svg{fill:var(--muted)}
 .hr-hide-desktop{display:none}
 
-/* ---------- Mobile menu ---------- */
+
+/* ---------- Mobile menu (closed by default) ---------- */
 .hr-mobile-menu{
-  display:none;
+  display:none;                           /* stays hidden on desktop */
   position:fixed; inset:72px 0 auto 0; z-index:900;
   background:var(--bg); border-bottom:1px solid var(--border);
-  padding:10px 18px; display:flex; flex-direction:column; gap:8px;
+  padding:10px 18px;
+  /* was mistakenly setting display:flex here — removed */
+  flex-direction:column; gap:8px;
 }
-.hr-mobile-menu.open{display:flex}
-.hr-mlink{color:var(--muted); text-decoration:none; padding:8px 6px}
-.hr-mlink:hover{color:var(--text)}
+.hr-mobile-menu.open{ display:flex; }     /* only visible when .open */
 
 /* =========================================================
    Hero (two-column)
