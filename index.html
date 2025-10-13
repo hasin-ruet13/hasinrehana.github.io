@@ -7,7 +7,14 @@
   <meta name="description" content="Hasin Rehana — Ph.D. Researcher in Biomedical NLP, LLMs & Multimodal AI at the University of North Dakota." />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/style.css?v=2.1" />
+
+  <!-- Tiny critical CSS so desktop never shows mobile menu even if external CSS is cached/missed -->
+  <style>
+    .mobile-menu{display:none}
+    .socials .sbtn{text-decoration:none}
+  </style>
+  <!-- IMPORTANT: relative path (works on project sites) -->
+  <link rel="stylesheet" href="assets/css/style.css?v=3.0" />
 </head>
 <body>
   <!-- Sticky Header / Navbar -->
@@ -22,7 +29,8 @@
         <a href="#experience" class="nav-link">Experience</a>
         <a href="#awards" class="nav-link">Awards</a>
         <a href="#talks" class="nav-link">Talks</a>
-        <a href="HasinRehana_CV.pdf" class="nav-link" target="_blank" rel="noopener">CV</a>
+        <!-- If you rename file to HasinRehana_CV.pdf, update this href -->
+        <a href="HasinRehana_CV.pdf.pdf" class="nav-link" target="_blank" rel="noopener">CV</a>
       </nav>
 
       <div class="nav-actions">
@@ -48,14 +56,14 @@
       <a href="#experience" class="mobile-link">Experience</a>
       <a href="#awards" class="mobile-link">Awards</a>
       <a href="#talks" class="mobile-link">Talks</a>
-      <a href="HasinRehana_CV.pdf" class="mobile-link" target="_blank" rel="noopener">CV</a>
+      <a href="HasinRehana_CV.pdf.pdf" class="mobile-link" target="_blank" rel="noopener">CV</a>
     </nav>
   </header>
 
   <main>
-    <!-- HERO / ABOUT -->
+    <!-- HERO / ABOUT (two-column) -->
     <section id="home" class="section container hero-grid">
-      <!-- Left column -->
+      <!-- Left column: photo + name + affiliation + icons -->
       <aside class="bio-card">
         <img src="profile.jpg" alt="Hasin Rehana" class="avatar" />
         <h1 class="display-name">Hasin Rehana</h1>
@@ -81,183 +89,4 @@
           </a>
           <!-- LinkedIn -->
           <a class="sbtn" href="https://www.linkedin.com/in/hasin-rehana-580184140" target="_blank" rel="noopener" title="LinkedIn">
-            <svg viewBox="0 0 24 24" width="22" height="22"><path d="M4.98 3.5a2.5 2.5 0 11-.02 5 2.5 2.5 0 01.02-5zM3 8.98h4v12H3zM9 8.98h3.84v1.64h.06c.53-1 1.83-2.06 3.76-2.06 4.02 0 4.76 2.65 4.76 6.1v6.32h-4v-5.6c0-1.34-.02-3.07-1.87-3.07-1.88 0-2.17 1.46-2.17 2.97v5.7H9z"/></svg>
-          </a>
-          <!-- ResearchGate -->
-          <a class="sbtn" href="https://www.researchgate.net/profile/Hasin_Rehana" target="_blank" rel="noopener" title="ResearchGate">
-            <svg viewBox="0 0 24 24" width="22" height="22"><path d="M4 3h10a5 5 0 010 10H9v8H4zM9 8h5a1 1 0 000-2H9z"/></svg>
-          </a>
-          <!-- CV -->
-          <a class="sbtn" href="HasinRehana_CV.pdf" target="_blank" rel="noopener" title="CV (PDF)">
-            <svg viewBox="0 0 24 24" width="22" height="22"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8zm0 0l6 6M8 13h8M8 17h8M8 9h4"/></svg>
-          </a>
-        </div>
-      </aside>
-
-      <!-- Right column -->
-      <div class="about">
-        <h2 class="h-title">About Me</h2>
-        <p>
-          I am a Ph.D. researcher in Computer Science at the University of North Dakota, specializing in
-          <em>Biomedical Natural Language Processing (BioNLP)</em>, <em>Large Language Models (LLMs)</em>, and
-          <em>Multimodal Learning</em>. My work focuses on developing state-of-the-art AI solutions for biomedical text and
-          relation mining, with applications in <em>health informatics</em> and <em>bioinformatics</em>.
-        </p>
-        <p>
-          I design and evaluate BioNLP pipelines using models such as <em>BERT</em>, <em>GPT</em>, <em>Llama</em>, and
-          <em>Gemini</em>, aiming to accelerate discovery in biomedicine through automated literature mining and information
-          extraction. I served as the <em>team lead</em> and <em>first author</em> of a system recognized as a
-          <em>runner-up</em> in the <em>BioASQ BioNNE</em> challenge, presented at <em>CLEF 2024</em>. I have also presented
-          at the <em>Great Lakes Bioinformatics Conference (GLBIO)</em> and university research symposia.
-        </p>
-        <p>
-          My first-author publications appear in venues such as <em>Bioinformatics Advances</em>, and I have contributed as a
-          co-author to collaborative studies in <em>BMC Public Health</em>.
-        </p>
-        <p class="updated">Updated May 2025</p>
-      </div>
-    </section>
-
-    <!-- NEWS -->
-    <section id="news" class="section container">
-      <h2 class="h-title">News</h2>
-      <ul class="timeline">
-        <li><span class="time">May 2025</span> — Presented “Identifying Cancer Vaccine Adjuvants using LLMs” at GLBIO 2025.</li>
-        <li><span class="time">Feb 2025</span> — Poster accepted at UND GRAD Symposium on Nested NER with Transformers.</li>
-        <li><span class="time">Oct 2024</span> — Abstract selected at ISV Annual Congress 2024 on LLMs in vaccine discovery.</li>
-        <li><span class="time">Sep 2024</span> — First-author paper in <em>Bioinformatics Advances</em> on PPI identification using LLMs.</li>
-      </ul>
-    </section>
-
-    <!-- PUBLICATIONS -->
-    <section id="publications" class="section container">
-      <h2 class="h-title">Publications</h2>
-      <ol class="pubs">
-        <li>Evaluating GPT and BERT models for protein–protein interaction identification in biomedical text — <em>Bioinformatics Advances</em>, 2024 <a class="ext" href="https://doi.org/10.1093/bioadv/vbae133" target="_blank" rel="noopener">DOI</a></li>
-        <li>Nested named entity recognition using multilayer BERT-based model — CLEF, 2024 <a class="ext" href="https://ceur-ws.org/Vol-3740/paper-18.pdf" target="_blank" rel="noopener">PDF</a></li>
-        <li>Adverse childhood experiences and chronic health outcomes — <em>BMC Public Health</em>, 2025 <a class="ext" href="https://doi.org/10.1186/s12889-025-22785-2" target="_blank" rel="noopener">DOI</a></li>
-        <li>Core ontologies and signature genes of pulmonary disease — <em>Gene Reports</em>, 2021 <a class="ext" href="https://doi.org/10.1016/j.genrep.2021.101206" target="_blank" rel="noopener">DOI</a></li>
-        <li>Risk predictive framework for Gynecologic Cancer — <em>BMC Bioinformatics</em>, 2021 <a class="ext" href="https://doi.org/10.1186/s12859-021-04131-6" target="_blank" rel="noopener">DOI</a></li>
-        <li>Protein interaction network & drug design of stomach cancer — <em>J. Proteins and Proteomics</em>, 2021 <a class="ext" href="https://doi.org/10.1007/s42485-020-00054-7" target="_blank" rel="noopener">DOI</a></li>
-        <li>3D–2D BCNN for Hyperspectral Imaging — ICIEV & icIVPR, 2021 <a class="ext" href="https://doi.org/10.1109/ICIEVicIVPR52578.2021.9563967" target="_blank" rel="noopener">DOI</a></li>
-        <li>Bangla handwritten digit recognition — EICT, 2017 <a class="ext" href="https://doi.org/10.1109/EICT.2017.8275203" target="_blank" rel="noopener">DOI</a></li>
-      </ol>
-
-      <div class="subgroup">
-        <div class="subhead">Under Review</div>
-        <ul>
-          <li>Leveraging LLMs for cancer vaccine adjuvant name extraction — submitted to AMIA 2025.</li>
-        </ul>
-      </div>
-
-      <div class="subgroup">
-        <div class="subhead">Preprints</div>
-        <ul>
-          <li>Cancer vaccine adjuvant name recognition using LLMs <a class="ext" href="https://doi.org/10.48550/arXiv.2502.09659" target="_blank" rel="noopener">arXiv</a></li>
-          <li>Ontology-based PPI explanation using LLMs <a class="ext" href="https://doi.org/10.1101/2025.04.07.647599" target="_blank" rel="noopener">bioRxiv</a></li>
-          <li>Plant disease detection using R-CNN <a class="ext" href="https://doi.org/10.48550/arXiv.2303.09063" target="_blank" rel="noopener">arXiv</a></li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- EXPERIENCE -->
-    <section id="experience" class="section container">
-      <h2 class="h-title">Experience</h2>
-      <ul class="bullets">
-        <li>Graduate Research Assistant — University of North Dakota (2023–Present)</li>
-        <li>Lecturer (on leave) — Daffodil International University, Bangladesh</li>
-        <li>Convener — Girls' Computer Programming Club, Daffodil International University</li>
-      </ul>
-    </section>
-
-    <!-- AWARDS -->
-    <section id="awards" class="section container">
-      <h2 class="h-title">Awards</h2>
-      <ul class="bullets">
-        <li>Travel Award — Data Science Symposium, South Dakota State University (2024)</li>
-        <li>Best Poster — Cyber Awareness and Research Symposium (UND, 2023)</li>
-        <li>ICT Masters Fellowship — Government of Bangladesh</li>
-        <li>Google Study Jam, Hackathons, Android Study Jam</li>
-      </ul>
-    </section>
-
-    <!-- TALKS -->
-    <section id="talks" class="section container">
-      <h2 class="h-title">Talks & Posters</h2>
-      <ul class="bullets">
-        <li>Identifying cancer vaccine adjuvants with LLMs — GLBIO, 2025 (Talk)</li>
-        <li>LLMs for vaccine adjuvants — Frank Low Research Day, UND, 2025 (Poster)</li>
-        <li>Multilayer BERT for Nested NER — GRAD, UND, 2025 (Poster)</li>
-        <li>Adjuvant names from clinical trial data — ND EPSCoR, 2024 (Poster)</li>
-        <li>ISV Annual Congress, 2024 (Poster)</li>
-        <li>VDOS Workshop @ ICBO, 2024 (Talk, Virtual)</li>
-        <li>Drug-drug interactions with LLMs — Frank Low Research Day, UND, 2024 (Poster)</li>
-        <li>NPBS 2024 (Poster)</li>
-        <li>PPI extraction with LLMs — GRAD, UND, 2024 (Poster)</li>
-        <li>SDSU Data Science Symposium, 2024 (Poster)</li>
-        <li>Evaluation of GPT-3 on PPI — GRAD, UND, 2023 (Poster)</li>
-        <li>ChatGPT for DDIs — VDOS Workshop @ ICBO, 2023 (Talk, Virtual)</li>
-        <li>PPI identification using GPT — CARS, UND, 2023 (Poster)</li>
-      </ul>
-    </section>
-
-    <footer class="container footer">
-      <div>© Hasin Rehana — University of North Dakota</div>
-      <div class="small-links">
-        <a href="https://med.und.edu/research/labs/hur/index.html" target="_blank" rel="noopener">Hur Lab</a>
-        <span>•</span>
-        <a href="https://github.com/hurlab" target="_blank" rel="noopener">Hur Lab GitHub</a>
-      </div>
-    </footer>
-  </main>
-
-  <script>
-    // Theme toggle
-    const toggle = document.getElementById('themeToggle');
-    const stored = localStorage.getItem('theme');
-    if (stored === 'dark') document.documentElement.classList.add('dark');
-    toggle.addEventListener('click', () => {
-      document.documentElement.classList.toggle('dark');
-      localStorage.setItem('theme',
-        document.documentElement.classList.contains('dark') ? 'dark' : 'light');
-    });
-
-    // Mobile menu (hidden by default; display only when open)
-    const burger = document.getElementById('hamburger');
-    const menu = document.getElementById('mobileMenu');
-    burger.addEventListener('click', () => {
-      const open = menu.classList.toggle('open');
-      burger.setAttribute('aria-expanded', open ? 'true' : 'false');
-    });
-    menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
-      menu.classList.remove('open');
-      burger.setAttribute('aria-expanded', 'false');
-    }));
-
-    // Smooth scroll + active link
-    const headerH = 72;
-    document.querySelectorAll('a[href^="#"]').forEach(a => {
-      a.addEventListener('click', (e) => {
-        const id = a.getAttribute('href').slice(1);
-        const el = document.getElementById(id);
-        if (!el) return;
-        e.preventDefault();
-        const y = el.getBoundingClientRect().top + window.scrollY - headerH;
-        window.scrollTo({ top: y, behavior: 'smooth' });
-      });
-    });
-
-    const links = [...document.querySelectorAll('.nav-link')];
-    const sections = [...document.querySelectorAll('section[id]')];
-    const io = new IntersectionObserver((entries) => {
-      entries.forEach(ent => {
-        if (ent.isIntersecting) {
-          const id = ent.target.id;
-          links.forEach(l => l.classList.toggle('active', l.getAttribute('href') === `#${id}`));
-        }
-      });
-    }, { rootMargin: '-45% 0px -50% 0px', threshold: 0.01 });
-    sections.forEach(s => io.observe(s));
-  </script>
-</body>
-</html>
+            <svg viewBox="0 0 24 24" width="22" height
