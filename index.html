@@ -19,43 +19,47 @@
     <button id="menu-btn" class="focus:outline-none text-2xl">☰</button>
   </header>
 
-  <!-- Sidebar -->
-<aside id="sidebar"
-  class="w-64 bg-blue-800 text-white flex flex-col justify-between py-6 fixed md:relative md:translate-x-0 transform -translate-x-full md:transform-none transition-transform duration-300 ease-in-out z-40 h-full md:h-auto mt-16 md:mt-0">
-  
-  <div class="flex flex-col items-center space-y-3"> <!-- reduced space -->
-    <img alt="Profile" class="rounded-full w-24 h-24 border-4 border-white" src="profile.jpg"/>
-    <h1 class="text-lg font-bold text-center mb-0 md:text-xl">Hasin Rehana</h1>
-    <p class="text-sm text-center px-1 mt-1">Ph.D. Researcher<br/>Biomedical NLP & AI</p>
+  <!-- ===== Sidebar ===== -->
+  <aside id="sidebar"
+    class="w-64 bg-blue-800 text-white flex flex-col justify-between py-5 fixed md:relative md:translate-x-0 transform -translate-x-full md:transform-none transition-transform duration-300 ease-in-out z-40 h-full md:h-auto mt-16 md:mt-0">
+    
+    <div class="flex flex-col items-center space-y-3">
+      <img alt="Profile" class="rounded-full w-24 h-24 border-4 border-white" src="profile.jpg"/>
+      <h1 class="text-lg font-bold text-center mb-0 md:text-xl">Hasin Rehana</h1>
+      <p class="text-sm text-center px-1 mt-1">Ph.D. Researcher<br/>Biomedical NLP & AI</p>
 
-    <!-- Compact Navigation -->
-    <nav class="w-full mt-3 space-y-0 text-sm"> <!-- tighter spacing -->
-      <div class="pl-4 py-1 hover:bg-blue-200 cursor-pointer sidebar-link bg-blue-700" onclick="showTab(event, 'overview')">Overview</div>
-      <div class="pl-4 py-1 hover:bg-blue-200 cursor-pointer sidebar-link" onclick="showTab(event, 'news')">News & Highlights</div>
-      <div class="pl-4 py-1 hover:bg-blue-200 cursor-pointer sidebar-link" onclick="showTab(event, 'research')">Research</div>
-      <div class="pl-4 py-1 hover:bg-blue-200 cursor-pointer sidebar-link" onclick="showTab(event, 'education')">Education</div>
-      <div class="pl-4 py-1 hover:bg-blue-200 cursor-pointer sidebar-link" onclick="showTab(event, 'publications')">Publications</div>
-      <div class="pl-4 py-1 hover:bg-blue-200 cursor-pointer sidebar-link" onclick="showTab(event, 'repos')">LLM Repositories</div>
-      <div class="pl-4 py-1 hover:bg-blue-200 cursor-pointer sidebar-link" onclick="showTab(event, 'talks')">Talks & Posters</div>
-      <div class="pl-4 py-1 hover:bg-blue-200 cursor-pointer sidebar-link" onclick="showTab(event, 'experience')">Experience</div>
-      <div class="pl-4 py-1 hover:bg-blue-200 cursor-pointer sidebar-link" onclick="showTab(event, 'skills')">Skills</div>
-      <div class="pl-4 py-1 hover:bg-blue-200 cursor-pointer sidebar-link" onclick="showTab(event, 'awards')">Awards</div>
-      <div class="pl-4 py-1 hover:bg-blue-200 cursor-pointer sidebar-link" onclick="showTab(event, 'contact')">Contact</div>
-    </nav>
-  </div>
-
-  <div class="flex flex-col items-center text-blue-200 text-xs space-y-1 px-3 pb-3">
-    <div class="flex flex-wrap justify-center gap-2 text-[13px]">
-      <a class="hover:underline" href="https://scholar.google.com/citations?user=q6tQJu0AAAAJ" target="_blank">Scholar</a>
-      <a class="hover:underline" href="https://github.com/hasin-ruet13" target="_blank">GitHub</a>
-      <a class="hover:underline" href="https://www.linkedin.com/in/hasin-rehana-580184140" target="_blank">LinkedIn</a>
-      <a class="hover:underline" href="https://www.researchgate.net/profile/Hasin_Rehana" target="_blank">ResearchGate</a>
+      <!-- Compact Navigation -->
+      <nav class="w-full mt-3 space-y-0 text-sm">
+        <div class="pl-4 py-1 hover:bg-blue-200 cursor-pointer sidebar-link bg-blue-700" onclick="showTab(event, 'overview')">Overview</div>
+        <div class="pl-4 py-1 hover:bg-blue-200 cursor-pointer sidebar-link" onclick="showTab(event, 'news')">News & Highlights</div>
+        <div class="pl-4 py-1 hover:bg-blue-200 cursor-pointer sidebar-link" onclick="showTab(event, 'research')">Research</div>
+        <div class="pl-4 py-1 hover:bg-blue-200 cursor-pointer sidebar-link" onclick="showTab(event, 'education')">Education</div>
+        <div class="pl-4 py-1 hover:bg-blue-200 cursor-pointer sidebar-link" onclick="showTab(event, 'publications')">Publications</div>
+        <div class="pl-4 py-1 hover:bg-blue-200 cursor-pointer sidebar-link" onclick="showTab(event, 'repos')">LLM Repositories</div>
+        <div class="pl-4 py-1 hover:bg-blue-200 cursor-pointer sidebar-link" onclick="showTab(event, 'talks')">Talks & Posters</div>
+        <div class="pl-4 py-1 hover:bg-blue-200 cursor-pointer sidebar-link" onclick="showTab(event, 'experience')">Experience</div>
+        <div class="pl-4 py-1 hover:bg-blue-200 cursor-pointer sidebar-link" onclick="showTab(event, 'skills')">Skills</div>
+        <div class="pl-4 py-1 hover:bg-blue-200 cursor-pointer sidebar-link" onclick="showTab(event, 'awards')">Awards</div>
+        <div class="pl-4 py-1 hover:bg-blue-200 cursor-pointer sidebar-link" onclick="showTab(event, 'contact')">Contact</div>
+      </nav>
     </div>
-  </div>
-</aside>
+
+    <!-- Links footer -->
+    <div class="flex flex-col items-center text-blue-200 text-xs space-y-1 px-3 pb-3">
+      <div class="flex flex-wrap justify-center gap-2 text-[13px]">
+        <a class="hover:underline" href="https://scholar.google.com/citations?user=q6tQJu0AAAAJ" target="_blank">Scholar</a>
+        <a class="hover:underline" href="https://github.com/hasin-ruet13" target="_blank">GitHub</a>
+        <a class="hover:underline" href="https://www.linkedin.com/in/hasin-rehana-580184140" target="_blank">LinkedIn</a>
+        <a class="hover:underline" href="https://www.researchgate.net/profile/Hasin_Rehana" target="_blank">ResearchGate</a>
+        <a class="hover:underline" href="https://med.und.edu/research/labs/hur/index.html" target="_blank">Hur Lab</a>
+        <a class="hover:underline" href="https://github.com/hurlab" target="_blank">Hur Lab GitHub</a>
+      </div>
+    </div>
+  </aside>
 
   <!-- ===== Main Content ===== -->
   <main class="flex-1 overflow-y-auto p-6 md:p-10 space-y-10 bg-white shadow-inner mt-20 md:mt-0">
+    
     <!-- === Overview === -->
     <section class="tab-content active" id="overview">
       <h2 class="text-2xl font-semibold mb-4">About Me</h2>
@@ -100,6 +104,18 @@
       <h2 class="text-2xl font-bold mb-4">Publications</h2>
       <ul class="list-disc pl-5 text-sm space-y-2">
         <li>Evaluating GPT and BERT models for protein–protein interaction identification — <em>Bioinformatics Advances</em>, 2024</li>
+      </ul>
+    </section>
+
+    <!-- === Repositories === -->
+    <section id="repos" class="tab-content">
+      <h2 class="text-2xl font-bold mb-4">LLM Research Repositories</h2>
+      <ul class="space-y-3">
+        <li class="bg-gray-100 p-4 rounded-lg shadow hover:shadow-md transition">
+          <h3 class="font-semibold text-lg">PPI-GPT-BERT</h3>
+          <p class="text-sm">Transformer-based protein–protein interaction extraction pipeline.</p>
+          <a href="https://github.com/hurlab/PPI-GPT-BERT" class="text-blue-700 underline">View Repository</a>
+        </li>
       </ul>
     </section>
 
