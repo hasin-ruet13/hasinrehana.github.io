@@ -228,6 +228,28 @@ a:hover{text-decoration:underline}
   .exp-dot{ top: 14px; }
 }
 
+/* ---------- ABOUT SECTION TYPING FIX (v1) ---------- */
+.about {
+  max-width: 750px;        /* narrower → easier reading */
+}
+
+.about p {
+  font-size: 16px;         /* reduced from 18px */
+  line-height: 1.55;       /* slightly tighter */
+}
+
+.h-title {
+  font-size: 32px;         /* reduced from 42px */
+  margin-bottom: 12px;
+}
+
+.about .updated {
+  font-size: 14px;
+  margin-top: 4px;
+  color: var(--muted);
+}
+
+
 /* ensure mobile menu is only visible when opened */
 header .hr-mobile-menu{display:none !important}
 header .hr-mobile-menu.open{display:flex !important}
